@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(20, 20, 20);
+  background-color: rgb(24, 24, 24);
   margin: 0px;
   transform: scale(100vw,100vh);
 }
@@ -23,7 +23,6 @@ body {
 }
 
 #menu-items {
-  margin-left: clamp(2rem, 4vw, 20rem);
   z-index: 2;
 }
 
@@ -113,7 +112,6 @@ body {
   display: block;
   font-family: 'Ibarra Real Nova', serif;
   font-size: clamp(2rem, 3.75vw, 8rem);
-  padding: clamp(0.05rem, 1.5vw, 2rem);
   text-decoration: none;
   transition: opacity 400ms ease;
 }
@@ -128,27 +126,38 @@ br {
   line-height: 8px;
 }
 
+div,input,textarea,button,select,a {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
 @media (min-width:900px) {
   body {
     overflow: hidden;
   }
   .content {
-    top: 5vh;
+    top: 10vh;
     left: 35vw;
   }
   #meni-items {
+    margin-left: clamp(2rem, 4vw, 20rem);
     position: relative;
+  }
+  .menu-item {
+    padding: clamp(0.1rem, 1.5vw, 2rem);
   }
 }
 
 @media (max-width:900px) {
   .content {
-    top: 35vh;
-    left: 2vw;
+    top: 28vh;
+    left: 7vw;
   }
   #menu-items {
     position: fixed;
-    top: 5vh;
-    left: 2vh;
+    top: 2vh;
+    left: 3vh;
+  }
+  .menu-item {
+    padding: clamp(0.1rem, 0.5vw, 1rem);
   }
 }
