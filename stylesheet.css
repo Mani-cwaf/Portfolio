@@ -1,17 +1,18 @@
 body {
   background-color: rgb(20, 20, 20);
   margin: 0px;
+  transform: scale(100vw,100vh);
 }
 
 .content {
-  position: absolute;
-  top: 20px;
-  left: 500px;
+  position: fixed;
+  top: 5vh;
+  left: 35vw;
   color: white;
   display: block;
   font-family: 'Amazon Ember', sans-serif;
-  font-size: clamp(1vw, 1.75vw, 4vw);
-  padding-block: clamp(0.25rem, 1.5vw, 2rem) 0rem;
+  font-size: clamp(1rem, 1.75vw, 4rem);
+  padding-block: clamp(0.25rem, 1.5vw, 2rem);
   text-decoration: none;
   z-index: 500;
 }
@@ -24,7 +25,7 @@ body {
 }
 
 #menu-items {
-  margin-left: clamp(2vw, 4vw, 20vw);
+  margin-left: clamp(2rem, 4vw, 20rem);
   position: relative;
   z-index: 2;
 }
@@ -114,8 +115,8 @@ body {
   cursor: pointer;
   display: block;
   font-family: 'Ibarra Real Nova', serif;
-  font-size: clamp(3vw, 3.75vw, 8vw);
-  padding: clamp(0.25vw, 1.5vw, 2vw);
+  font-size: clamp(2rem, 3.75vw, 8rem);
+  padding: clamp(0.05rem, 1.5vw, 2rem);
   text-decoration: none;
   transition: opacity 400ms ease;
 }
