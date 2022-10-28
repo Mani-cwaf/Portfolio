@@ -10,7 +10,7 @@ body {
   color: white;
   display: block;
   font-family: 'Amazon Ember', sans-serif;
-  font-size: clamp(1rem, 1.75vw, 4rem);
+  font-size: clamp(1vw, 1.75vw, 4vw);
   padding-block: clamp(0.25rem, 1.5vw, 2rem) 0rem;
   text-decoration: none;
   z-index: 500;
@@ -24,7 +24,7 @@ body {
 }
 
 #menu-items {
-  margin-left: clamp(2rem, 4vw, 20rem);
+  margin-left: clamp(2vw, 4vw, 20vw);
   position: relative;
   z-index: 2;
 }
@@ -83,7 +83,7 @@ body {
   background-image: url("https://images.unsplash.com/photo-1492496913980-501348b61469");
   background-position: center 40%;
   background-size: 110vmax;
-  height: 100%;
+  height: 100vh;
   left: 0px;  
   opacity: 0.15;
   position: absolute;
@@ -91,7 +91,7 @@ body {
   transition: opacity 800ms ease,
     background-size 800ms ease,
     background-position 800ms ease;
-  width: 100%;
+  width: 100vw;
   z-index: 0;
 }
 
@@ -114,8 +114,8 @@ body {
   cursor: pointer;
   display: block;
   font-family: 'Ibarra Real Nova', serif;
-  font-size: clamp(3rem, 3.75vw, 8rem);
-  padding: clamp(0.25rem, 1.5vw, 2rem) 0rem;
+  font-size: clamp(3vw, 3.75vw, 8vw);
+  padding: clamp(0.25vw, 1.5vw, 2vw);
   text-decoration: none;
   transition: opacity 400ms ease;
 }
