@@ -6,8 +6,6 @@ body {
 
 .content {
   position: fixed;
-  top: 5vh;
-  left: 35vw;
   color: white;
   display: block;
   font-family: 'Amazon Ember', sans-serif;
@@ -26,7 +24,6 @@ body {
 
 #menu-items {
   margin-left: clamp(2rem, 4vw, 20rem);
-  position: relative;
   z-index: 2;
 }
 
@@ -129,4 +126,29 @@ a:visited {
 }
 br {
   line-height: 8px;
+}
+
+@media (min-width:900px) {
+  body {
+    overflow: hidden;
+  }
+  .content {
+    top: 5vh;
+    left: 35vw;
+  }
+  #meni-items {
+    position: relative;
+  }
+}
+
+@media (max-width:900px) {
+  .content {
+    top: 35vh;
+    left: 2vw;
+  }
+  #menu-items {
+    position: fixed;
+    top: 5vh;
+    left: 2vh;
+  }
 }
