@@ -28,10 +28,8 @@ Array.from(document.getElementsByClassName("menu-item")).forEach((item, index) =
       }
     }
     item.onmouseout = () => {
-      if (!locked) {
-        ClearContent();
-      } else {
-        ClearContent();
+      ClearContent();
+      if (locked) {
         document.getElementsByClassName("content")[lockedindex].style.visibility = "visible";
       }
     }
