@@ -31,6 +31,7 @@ Array.from(document.getElementsByClassName("menu-item")).forEach((item, index) =
       ClearContent();
       if (locked) {
         document.getElementsByClassName("content")[lockedindex].style.visibility = "visible";
+        menu.dataset.activeIndex = lockedindex;
       }
     }
 });
