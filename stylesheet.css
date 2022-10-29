@@ -9,7 +9,7 @@ body {
   color: white;
   display: block;
   font-family: 'Amazon Ember', sans-serif;
-  font-size: clamp(1rem, 1.75vw, 4rem);
+  font-size: clamp(1rem, 1.65vw, 4rem);
   padding-block: clamp(0.25rem, 1.5vw, 2rem);
   text-decoration: none;
   z-index: 500;
@@ -85,9 +85,7 @@ body {
   opacity: 0.15;
   position: absolute;
   top: 0px;
-  transition: opacity 800ms ease,
-    background-size 800ms ease,
-    background-position 800ms ease;
+  transition: opacity 800ms ease, background-size 800ms ease, background-position 800ms ease;
   width: 100vw;
   z-index: 0;
 }
@@ -111,7 +109,6 @@ body {
   cursor: pointer;
   display: block;
   font-family: 'Ibarra Real Nova', serif;
-  font-size: clamp(2rem, 3.75vw, 8rem);
   text-decoration: none;
   transition: opacity 400ms ease;
 }
@@ -130,9 +127,9 @@ div,input,textarea,button,select,a {
   -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
-@media (min-width:900px) {
+@media (min-width:800px) {
   body {
-    overflow: hidden;
+    overflow: visible;
   }
   .content {
     top: 10vh;
@@ -143,21 +140,23 @@ div,input,textarea,button,select,a {
     position: relative;
   }
   .menu-item {
-    padding: clamp(0.1rem, 1.5vw, 2rem);
+    font-size: clamp(2rem, 3.5vw, 8rem);
+    padding: clamp(0.1rem, 1vw, 2rem);
   }
 }
 
-@media (max-width:900px) {
+@media (max-width:800px) {
   .content {
-    top: 28vh;
+    top: 29.5vh;
     left: 7vw;
   }
   #menu-items {
     position: fixed;
-    top: 2vh;
+    top: 1.5vh;
     left: 3vh;
   }
   .menu-item {
-    padding: clamp(0.1rem, 0.5vw, 1rem);
+    font-size: clamp(2rem, 2.75vw, 8rem);
+    padding: clamp(0.1rem, 0.25vw, 1rem);
   }
 }
