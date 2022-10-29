@@ -104,11 +104,11 @@ body {
   opacity: 0.3;
 }
 
-#menu-items:has([data-locked="true"]) .menu-item:not(:hover) {
+#menu-items:has([data-locked="true"]):not(:hover) .menu-item {
   opacity: 0.3;
 }
 
-#menu-items .menu-item[data-locked="true"]:not(:hover) {
+#menu-items:not(:hover) .menu-item[data-locked="true"] {
   opacity: 1;
 }
 
