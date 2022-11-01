@@ -10,7 +10,7 @@ body {
   display: block;
   font-family: 'Amazon Ember', sans-serif;
   font-size: clamp(1rem, 1.65vw, 4rem);
-  padding-block: clamp(0.25rem, 1.5vw, 2rem);
+  padding: clamp(0.25rem, 1.5vw, 2rem);
   text-decoration: none;
   z-index: 500;
 }
