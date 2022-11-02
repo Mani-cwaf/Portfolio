@@ -8,8 +8,8 @@ body {
   position: fixed;
   color: white;
   display: block;
-  font-family: 'Amazon Ember', sans-serif;
-  font-size: clamp(1rem, 1.65vw, 4rem);
+  font-family: 'Rubik', sans-serif;
+  font-size: clamp(1rem, 1.5vw, 4rem);
   padding: clamp(0.25rem, 1vw, 2rem);
   text-decoration: none;
   z-index: 4;
@@ -69,9 +69,7 @@ body {
   left: 0px;
   position: absolute;
   top: 0px;
-  transition: opacity 800ms ease, 
-    background-size 800ms ease,
-    background-position 800ms ease;
+  transition: opacity 400ms ease,  background-size 400ms ease, background-position 400ms ease;
   width: 100vw;
   z-index: 1;
 }
@@ -85,13 +83,13 @@ body {
   opacity: 0.15;
   position: absolute;
   top: 0px;
-  transition: opacity 800ms ease, background-size 800ms ease, background-position 800ms ease;
+  transition: opacity 400ms ease, background-size 400ms ease, background-position 400ms ease;
   width: 100vw;
   z-index: 0;
 }
 
 #menu-items:hover ~ #menu-background-pattern {
-  background-size: 11vmin 11vmin;
+  background-size: 15vmin 15vmin;
   opacity: 0.5;
 }
 
@@ -116,7 +114,7 @@ body {
   color: white;
   cursor: pointer;
   display: block;
-  font-family: 'Ibarra Real Nova', serif;
+  font-family: 'Rubik', sans-serif;
   text-decoration: none;
   transition: opacity 400ms ease;
 }
@@ -140,7 +138,7 @@ div,input,textarea,button,select,a {
     overflow: visible;
   }
   .content {
-    top: 10vh;
+    top: 1.5vh;
     left: 25vw;
   }
   #meni-items {
