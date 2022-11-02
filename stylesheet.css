@@ -74,7 +74,7 @@ body {
 	z-index:0
 }
 #menu-items:hover ~ #menu-background-pattern {
-	background-size:15vmin 15vmin;
+	background-size:18vmin 18vmin;
 	opacity:.5
 }
 #menu-items:hover ~ #menu-background-image {
