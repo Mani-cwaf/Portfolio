@@ -1,144 +1,141 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,500;1,400;1,600&display=swap');
 
 body {
-	background-color: rgb(24, 24, 24);
-	margin: 0;
-	transform: scale(100vw,100vh);
+	background-color:#181818;
+	margin:0;
+	transform:scale(100vw,100vh)
 }
 .content {
-	position: fixed;
-	color: white;
-	display: block;
-	font-family: 'Rubik', sans-serif;
-	font-size: clamp(1rem, 1.5vw, 4rem);
-	padding: clamp(0.25rem, 1vw, 2rem);
-	text-decoration: none;
-	z-index: 4;
+	position:fixed;
+	color:#fff;
+	display:block;
+	font-family:'Rubik',sans-serif;
+	font-size:clamp(0.5rem,1.5vw,4rem);
+	padding:clamp(0.25rem,1vw,2rem);
+	text-decoration:none;
+	z-index:4
 }
 #menu {
-	align-items: center;
-	display: flex;
-	height: 100vh;
-	width: 100vw;
+	align-items:center;
+	display:flex;
+	height:100vh;
+	width:100vw
 }
 #menu-items {
-	z-index: 2;
+	z-index:2
 }
 #menu[data-active-index="3"] > #menu-background-pattern {
-	background-position: 0 -15%;
+	background-position:0 -15%
 }
 #menu[data-active-index="2"] > #menu-background-pattern {
-	background-position: 0 -50%;
+	background-position:0 -50%
 }
 #menu[data-active-index="1"] > #menu-background-pattern {
-	background-position: 0 -75%;
+	background-position:0 -75%
 }
 #menu[data-active-index="0"] > #menu-background-pattern {
-	background-position: 0 -100%;
+	background-position:0 -100%
 }
 #menu[data-active-index="3"] > #menu-background-image {
-	background-position: center 45%;
+	background-position:center 45%
 }
 #menu[data-active-index="2"] > #menu-background-image {
-	background-position: center 50%;
+	background-position:center 50%
 }
 #menu[data-active-index="1"] > #menu-background-image {
-	background-position: center 55%;
+	background-position:center 55%
 }
 #menu[data-active-index="0"] > #menu-background-image {
-	background-position: center 60%;
+	background-position:center 60%
 }
 #menu-background-pattern {
-	background-image: radial-gradient(rgba(255, 255, 255, 0.1) 9%,transparent 9%);
-	background-position: 0 0;
-	background-size: 12vmin 12vmin;
-	height: 100vh;
-	left: 0;
-	position: absolute;
-	top: 0;
-	transition: opacity 400ms ease, background-size 400ms ease, background-position 400ms ease;
-	width: 100vw;
-	z-index: 1;
+	background-image:radial-gradient(rgba(255,255,255,0.1) 9%,transparent 9%);
+	background-position:0 0;
+	background-size:15vmin 15vmin;
+	height:100vh;
+	left:0;
+	position:absolute;
+	top:0;
+	transition:opacity 500ms ease,background-size 500ms ease,background-position 500ms ease;
+	width:100vw;
+	z-index:1
 }
 #menu-background-image {
-	background-image: url("https://images.unsplash.com/photo-1492496913980-501348b61469");
-	background-position: center 40%;
-	background-size: 110vmax;
-	height: 100vh;
-	opacity: 0.15;
-	position: absolute;
-	top: 0;
-  left: 0;
-	transition: opacity 400ms ease, background-size 400ms ease, background-position 400ms ease;
-	width: 100vw;
-	z-index: 0;
+	background-image:url(https://images.unsplash.com/photo-1492496913980-501348b61469);
+	background-position:center 40%;
+	background-size:110vmax;
+	height:100vh;
+	opacity:.15;
+	position:absolute;
+	top:0;
+	left:0;
+	transition:opacity 500ms ease,background-size 500ms ease,background-position 500ms ease;
+	width:100vw;
+	z-index:0
 }
 #menu-items:hover ~ #menu-background-pattern {
-	background-size: 15vmin 15vmin;
-	opacity: 0.5;
+	background-size:15vmin 15vmin;
+	opacity:.5
 }
 #menu-items:hover ~ #menu-background-image {
-	background-size: 100vmax;
-	opacity: 0.1;
+	background-size:100vmax;
+	opacity:.1
 }
 #menu-items:hover > .menu-item:not(:hover) {
-	opacity: 0.3;
+	opacity:.3
 }
 #menu-items:has([data-locked="true"]):not(:hover) .menu-item {
-	opacity: 0.3;
+	opacity:.3
 }
 #menu-items:not(:hover) .menu-item[data-locked="true"] {
-	opacity: 1;
+	opacity:1
 }
 .menu-item {
-	color: white;
-	cursor: pointer;
-	display: block;
-	font-family: 'Rubik', sans-serif;
-	text-decoration: none;
-	transition: opacity 400ms ease;
+	color:#fff;
+	cursor:pointer;
+	display:block;
+	font-family:'Rubik',sans-serif;
+	text-decoration:none;
+	transition:opacity 500ms ease
 }
 a {
-	color: gray;
+	color:gray
 }
 a:visited {
-	color: gray;
+	color:gray
 }
 br {
-	line-height: 8px;
+	line-height:8px
 }
 div,input,textarea,button,select,a {
-	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-tap-highlight-color:rgba(0,0,0,0)
 }
 @media (min-width:800px) {
-	body {
-		overflow: visible;
-	}
 	.content {
-		top: 1.5vh;
-		left: 25vw;
-	}
+		top:1.5vh;
+		left:25vw
+}
 	#meni-items {
-		margin-left: clamp(2rem, 4vw, 20rem);
-		position: relative;
-	}
+		margin-left:clamp(2rem,4vw,20rem);
+		position:relative
+}
 	.menu-item {
-		font-size: clamp(2rem, 3.5vw, 8rem);
-		padding: clamp(0.1rem, 1vw, 2rem);
-	}
+		font-size:clamp(2rem,3.5vw,8rem);
+		padding:clamp(0.1rem,1vw,2rem)
+}
 }
 @media (max-width:800px) {
 	.content {
-		top: 29.5vh;
-		left: 7vw;
-	}
+		top:29.5vh;
+		left:7vw
+}
 	#menu-items {
-		position: fixed;
-		top: 1.5vh;
-		left: 3vh;
-	}
+		position:fixed;
+		top:1.5vh;
+		left:3vh
+}
 	.menu-item {
-		font-size: clamp(2rem, 2.75vw, 8rem);
-		padding: clamp(0.1rem, 0.25vw, 1rem);
-	}
+		font-size:clamp(1rem,2.75vw,8rem);
+		padding:clamp(0.1rem,0.25vw,1rem)
+}
 }
