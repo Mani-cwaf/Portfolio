@@ -10,9 +10,9 @@ body {
   display: block;
   font-family: 'Amazon Ember', sans-serif;
   font-size: clamp(1rem, 1.65vw, 4rem);
-  padding: clamp(0.25rem, 1.5vw, 2rem);
+  padding: clamp(0.25rem, 1vw, 2rem);
   text-decoration: none;
-  z-index: 500;
+  z-index: 4;
 }
 
 #menu {  
@@ -141,7 +141,7 @@ div,input,textarea,button,select,a {
   }
   .content {
     top: 10vh;
-    left: 35vw;
+    left: 25vw;
   }
   #meni-items {
     margin-left: clamp(2rem, 4vw, 20rem);
