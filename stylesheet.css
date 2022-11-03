@@ -49,6 +49,8 @@ body {
 	background-position:center 60%
 }
 #menu-background-pattern {
+	background-image:-webkit-radial-gradient(rgba(255,255,255,0.1) 9%,transparent 9%);
+	background-image:-moz-radial-gradient(rgba(255,255,255,0.1) 9%,transparent 9%);
 	background-image:radial-gradient(rgba(255,255,255,0.1) 9%,transparent 9%);
 	background-position:0 0;
 	background-size:15vmin 15vmin;
