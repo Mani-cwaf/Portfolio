@@ -4,7 +4,10 @@ body {
 	background-color:#181818;
 	transform:scale(100vw,100vh);
     margin: 0;
-    padding: 0
+    padding: 0;
+}
+body[data-ease="true"] {
+	transition: opacity 500ms ease;
 }
 
 br {
@@ -24,7 +27,7 @@ br {
 	font-size:clamp(0.5rem, 1.65vw, 4rem);
 	padding:clamp(0.25rem, 1vw, 2rem);
 	text-decoration:none;
-	z-index:4;
+	z-index: 4;
 	height: 96vh;
 	width: 73vw;
 	overflow-y: scroll;
@@ -92,7 +95,7 @@ br {
 	left:0;
 	position:absolute;
 	top:0;
-	transition:opacity 200ms ease,background-size 200ms ease,background-position 200ms ease;
+	transition:opacity 400ms ease, background-size 400ms ease,background-position 400ms ease;
 	width:100vw;
 	z-index:1
 }
@@ -105,7 +108,7 @@ br {
 	position:absolute;
 	top:0;
 	left:0;
-	transition:opacity 200ms ease,background-size 200ms ease,background-position 200ms ease;
+	transition: opacity 400ms ease, background-size 400ms ease, background-position 400ms ease;
 	width:100vw;
 	z-index:0
 }

@@ -1,18 +1,21 @@
-function ClearContent(lock) {
-    if (lock) {
-        Array.from(document.getElementsByClassName("menu-item")).forEach((item) => {
-            item.dataset.locked = "false";
-        });
-    } else {
-        Array.from(document.getElementsByClassName("content")).forEach((item) => {
-            item.style.visibility = "hidden";
-        });
-    }
-}
-
-document.onreadystatechange = function() {
+document.onreadystatechange = () => {
     if (document.readyState == "complete") {
-        document.querySelector("body").style.visibility = "visible";
+        setTimeout(() => {
+            document.querySelector("body").dataset.ease = "true";
+            document.querySelector("body").style.opacity = "1";
+        }, 750);
+
+        function ClearContent(lock) {
+            if (lock) {
+                Array.from(document.getElementsByClassName("menu-item")).forEach((item) => {
+                    item.dataset.locked = "false";
+                });
+            } else {
+                Array.from(document.getElementsByClassName("content")).forEach((item) => {
+                    item.style.visibility = "hidden";
+                });
+            }
+        }
 
         const menu = document.getElementById("menu");
         var locked = false;
@@ -51,6 +54,7 @@ document.onreadystatechange = function() {
             };
         });
     } else {
-        document.querySelector("body").style.visibility = "hidden";
+        document.querySelector("body").dataset.ease = "false";
+        document.querySelector("body").style.opacity = "0";
   }
 };
