@@ -12,7 +12,7 @@ document.onreadystatechange = () => {
                 });
             } else {
                 Array.from(document.getElementsByClassName("content")).forEach((item) => {
-                    item.style.visibility = "hidden";
+                    item.style.opacity = "0";
                 });
             }
         }
@@ -27,7 +27,7 @@ document.onreadystatechange = () => {
             item.onmouseover = () => {
                 menu.dataset.activeIndex = index;
                 ClearContent(false);
-                document.getElementsByClassName("content")[index].style.visibility = "visible";
+                document.getElementsByClassName("content")[index].style.opacity = "1";
             };
             item.onmousedown = () => {
                 if (locked) {
@@ -48,7 +48,7 @@ document.onreadystatechange = () => {
             item.onmouseout = () => {
                 ClearContent(false);
                 if (locked) {
-                    document.getElementsByClassName("content")[lockedindex].style.visibility = "visible";
+                    document.getElementsByClassName("content")[lockedindex].style.opacity = "1";
                     menu.dataset.activeIndex = lockedindex;
                 }
             };
