@@ -10,16 +10,6 @@ body {
 body[data-ease="true"] {
 	transition: opacity 500ms ease;
 }
-
-br {
-	-webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none
-}
-
 .content {
 	position:fixed;
 	color:#fff;
@@ -33,26 +23,21 @@ br {
 	width: 73vw;
 	overflow-y: scroll;
 }
-
 .content::-webkit-scrollbar {
   	width: 25px;
 }
-
 .content::-webkit-scrollbar-track {
   	background-color: transparent;
 }
-
 .content::-webkit-scrollbar-thumb {
 	background-color: #848484;
 	border-radius: 20px;
 	border: 6px solid transparent;
 	background-clip: content-box;
 }
-
 .content::-webkit-scrollbar-thumb:hover {
 	background-color: #6d6c6c;
 }
-
 #menu {
 	align-items:center;
 	display:flex;
@@ -155,6 +140,17 @@ a:visited {
 }
 br {
 	line-height: 5px
+}
+br {
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+span {
+	cursor: url(Cursors/Cursor-Pointer.png), default !important;
 }
 div,input,textarea,button,select,a {
 	-webkit-tap-highlight-color:rgba(0,0,0,0)
