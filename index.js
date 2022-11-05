@@ -12,6 +12,7 @@ document.onreadystatechange = () => {
                 });
             } else {
                 Array.from(document.getElementsByClassName("content")).forEach((item) => {
+                    item.style.opacity = "0";
                     item.style.visibility = "hidden";
                 });
             }
@@ -27,6 +28,7 @@ document.onreadystatechange = () => {
             item.onmouseover = () => {
                 menu.dataset.activeIndex = index;
                 ClearContent(false);
+                document.getElementsByClassName("content")[index].style.opacity = "1";
                 document.getElementsByClassName("content")[index].style.visibility = "visible";
             };
             item.onmousedown = () => {
@@ -48,6 +50,7 @@ document.onreadystatechange = () => {
             item.onmouseout = () => {
                 ClearContent(false);
                 if (locked) {
+                    document.getElementsByClassName("content")[lockedindex].style.opacity = "1";
                     document.getElementsByClassName("content")[lockedindex].style.visibility = "visible";
                     menu.dataset.activeIndex = lockedindex;
                 }

@@ -22,7 +22,7 @@ body[data-ease="true"] {
 	height: 96vh;
 	width: 73vw;
 	overflow-y: scroll;
-	transition: opacity 500ms ease;
+	transition: opacity 400ms ease;
 }
 .content::-webkit-scrollbar {
   	width: 25px;
