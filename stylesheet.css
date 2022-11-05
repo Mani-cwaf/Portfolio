@@ -5,6 +5,7 @@ body {
 	transform:scale(100vw,100vh);
     margin: 0;
     padding: 0;
+	cursor: url(Cursors/Cursor-Arrow.png), default !important;
 }
 body[data-ease="true"] {
 	transition: opacity 500ms ease;
@@ -131,7 +132,7 @@ br {
 }
 .menu-item {
 	color: #fff;
-	cursor: pointer;
+	cursor: url(Cursors/Cursor-Hand.png), default !important;
 	display: block;
 	font-family: 'Rubik',sans-serif;
 	text-decoration: none;
@@ -139,6 +140,9 @@ br {
 }
 a {
 	color: gray
+}
+a:hover {
+	cursor: url(Cursors/Cursor-Hand.png), default !important;
 }
 a:visited {
 	color: gray
