@@ -5,29 +5,27 @@ document.onreadystatechange = () => {
             document.querySelector("body").style.opacity = "1";
         }, 750);
 
-        function ClearContent(lock) {
-            if (lock) {
-                Array.from(document.getElementsByClassName("menu-item")).forEach((item) => {
-                    item.dataset.locked = "false";
-                });
-            } else {
-                Array.from(document.getElementsByClassName("content")).forEach((item) => {
-                    item.style.opacity = "0";
-                    item.style.visibility = "hidden";
-                });
-            }
-        }
-
         const menu = document.getElementById("menu");
         var locked = false;
         var lockedindex;
 
+        function ClearContent() {
+            Array.from(document.getElementsByClassName("content")).forEach((item) => {
+                item.style.opacity = "0";
+                item.style.visibility = "hidden";
+            });
+        }
+        function ClearLocks() {
+            Array.from(document.getElementsByClassName("menu-item")).forEach((item) => {
+                item.dataset.locked = "false";
+            });
+        }
         ClearContent();
 
         Array.from(document.getElementsByClassName("menu-item")).forEach((item, index) => {
             item.onmouseover = () => {
                 menu.dataset.activeIndex = index;
-                ClearContent(false);
+                ClearContent();
                 document.getElementsByClassName("content")[index].style.opacity = "1";
                 document.getElementsByClassName("content")[index].style.visibility = "visible";
             };
@@ -35,9 +33,9 @@ document.onreadystatechange = () => {
                 if (locked) {
                     if (lockedindex == index) {
                         locked = false;
-                        ClearContent(true);
+                        ClearLocks();
                     } else {
-                        ClearContent(true);
+                        ClearLocks();
                         lockedindex = menu.dataset.activeIndex;
                         item.dataset.locked = "true";
                     }
@@ -48,7 +46,7 @@ document.onreadystatechange = () => {
                 }
             };
             item.onmouseout = () => {
-                ClearContent(false);
+                ClearContent();
                 if (locked) {
                     document.getElementsByClassName("content")[lockedindex].style.opacity = "1";
                     document.getElementsByClassName("content")[lockedindex].style.visibility = "visible";
