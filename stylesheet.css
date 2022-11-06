@@ -3,18 +3,18 @@
 body {
 	background-color:#181818;
 	transform:scale(100vw,100vh);
-    margin: 0;
-    padding: 0;
-	cursor: url(Cursors/Cursor-Arrow.png), default !important;
+	margin: 0;
+	padding: 0;
+	cursor: url(Cursors/Cursor-Arrow.png), default !important
 }
 body[data-ease="true"] {
-	transition: opacity 750ms ease;
+	transition: opacity 750ms ease
 }
 .content {
 	position:fixed;
 	color:#fff;
 	display:block;
-	font-family:'Rubik',sans-serif;
+	font-family:'Rubik';
 	font-size:clamp(0.5rem, 1.65vw, 4rem);
 	padding:clamp(0.25rem, 1vw, 2rem);
 	text-decoration:none;
@@ -22,22 +22,22 @@ body[data-ease="true"] {
 	height: 96vh;
 	width: 73vw;
 	overflow-y: scroll;
-	transition: opacity 400ms ease;
+	transition: opacity 400ms ease
 }
 .content::-webkit-scrollbar {
-  	width: 25px;
+	width: 25px
 }
 .content::-webkit-scrollbar-track {
-  	background-color: transparent;
+	background-color: transparent
 }
 .content::-webkit-scrollbar-thumb {
 	background-color: #848484;
 	border-radius: 20px;
 	border: 6px solid transparent;
-	background-clip: content-box;
+	background-clip: content-box
 }
 .content::-webkit-scrollbar-thumb:hover {
-	background-color: #6d6c6c;
+	background-color: #6d6c6c
 }
 #menu {
 	align-items:center;
@@ -99,59 +99,60 @@ body[data-ease="true"] {
 	width:100vw;
 	z-index:0
 }
-#menu-items:hover ~ #menu-background-pattern {
-	background-size:18vmin 18vmin;
-	opacity:.5
+#menu-items:has(.menu-item:hover) ~ #menu-background-pattern {
+	background-size: 18vmin 18vmin;
+	opacity: .5
 }
-#menu-items:hover ~ #menu-background-image {
+#menu-items:has(.menu-item:hover) ~ #menu-background-image {
 	background-size:100vmax;
-	opacity:.1
+	opacity: .1
 }
-#menu-items:hover > .menu-item:not(:hover) {
-	opacity:.3
+#menu-items:has(:not(div):hover) .menu-item:not(:hover) {
+	opacity: .3
 }
-#menu-items:has([data-locked="true"]):not(:hover) .menu-item {
-	opacity:.3
+#menu-items:has([data-locked="true"]:not(:hover)) .menu-item[data-locked="false"]:not(:hover) {
+	opacity: .3
 }
 #menu-items:not(:hover) .menu-item[data-locked="true"] {
-	opacity: 1
+	opacity: 1 !important
 }
 .menu-item {
 	color: #fff;
 	cursor: url(Cursors/Cursor-Hand.png), default !important;
-	display: block;
-	font-family: 'Rubik',sans-serif;
+	display: inline-block;
+	padding: 5vh;
+	font-family: 'Rubik';
 	text-decoration: none;
 	transition: opacity 400ms ease;
 	-webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none
 }
 a {
-	color: gray
+	color: #808080
 }
 a:hover {
-	cursor: url(Cursors/Cursor-Hand.png), default !important;
+	cursor: url(Cursors/Cursor-Hand.png), default !important
 }
 a:visited {
-	color: gray
+	color: #808080
 }
 br {
 	line-height: 5px
 }
 br {
 	-webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none
 }
 span {
-	cursor: url(Cursors/Cursor-Pointer.png), default !important;
+	cursor: url(Cursors/Cursor-Pointer.png), default !important
 }
 div,input,textarea,button,select,a {
 	-webkit-tap-highlight-color:rgba(0,0,0,0)

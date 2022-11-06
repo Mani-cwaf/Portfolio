@@ -1,61 +1,67 @@
 document.onreadystatechange = () => {
-    if (document.readyState == "complete") {
-        setTimeout(() => {
-            document.querySelector("body").dataset.ease = "true";
-            document.querySelector("body").style.opacity = "1";
-        }, 750);
+	if (document.readyState == "complete") {
+		setTimeout(() => {
+			document.querySelector("body")
+				.dataset.ease = "true";
+			document.querySelector("body")
+				.style.opacity = "1";
+		}, 750);
+		const menu = document.getElementById("menu");
+		var locked = false;
+		var lockedindex;
 
-        const menu = document.getElementById("menu");
-        var locked = false;
-        var lockedindex;
+		function ClearContent() {
+			Array.from(document.getElementsByClassName("content"))
+				.forEach((item) => {
+					item.style.opacity = "0";
+					item.style.visibility = "hidden";
+				});
+		}
 
-        function ClearContent() {
-            Array.from(document.getElementsByClassName("content")).forEach((item) => {
-                item.style.opacity = "0";
-                item.style.visibility = "hidden";
-            });
-        }
-        function ClearLocks() {
-            Array.from(document.getElementsByClassName("menu-item")).forEach((item) => {
-                item.dataset.locked = "false";
-            });
-        }
-        ClearContent();
-
-        Array.from(document.getElementsByClassName("menu-item")).forEach((item, index) => {
-            item.onmouseover = () => {
-                menu.dataset.activeIndex = index;
-                ClearContent();
-                document.getElementsByClassName("content")[index].style.opacity = "1";
-                document.getElementsByClassName("content")[index].style.visibility = "visible";
-            };
-            item.onmousedown = () => {
-                if (locked) {
-                    if (lockedindex == index) {
-                        locked = false;
-                        ClearLocks();
-                    } else {
-                        ClearLocks();
-                        lockedindex = menu.dataset.activeIndex;
-                        item.dataset.locked = "true";
-                    }
-                } else {
-                    locked = true;
-                    lockedindex = menu.dataset.activeIndex;
-                    item.dataset.locked = "true";
-                }
-            };
-            item.onmouseout = () => {
-                ClearContent();
-                if (locked) {
-                    document.getElementsByClassName("content")[lockedindex].style.opacity = "1";
-                    document.getElementsByClassName("content")[lockedindex].style.visibility = "visible";
-                    menu.dataset.activeIndex = lockedindex;
-                }
-            };
-        });
-    } else {
-        document.querySelector("body").dataset.ease = "false";
-        document.querySelector("body").style.opacity = "0";
-  }
+		function ClearLocks() {
+			Array.from(document.getElementsByClassName("menu-item"))
+				.forEach((item) => {
+					item.dataset.locked = "false";
+				});
+		}
+		ClearContent();
+		Array.from(document.getElementsByClassName("menu-item"))
+			.forEach((item, index) => {
+				item.onmouseover = () => {
+					menu.dataset.activeIndex = index;
+					ClearContent();
+					document.getElementsByClassName("content")[index].style.opacity = "1";
+					document.getElementsByClassName("content")[index].style.visibility = "visible";
+				};
+				item.onmousedown = () => {
+					if (locked) {
+						if (lockedindex == index) {
+							locked = false;
+							ClearLocks();
+						} else {
+							ClearLocks();
+							lockedindex = menu.dataset.activeIndex;
+							item.dataset.locked = "true";
+						}
+					} else {
+						locked = true;
+						lockedindex = menu.dataset.activeIndex;
+						item.dataset.locked = "true";
+					}
+				};
+				item.onmouseout = () => {
+					ClearContent();
+					if (locked) {
+						document.getElementsByClassName("content")[lockedindex].style.opacity = "1";
+						document.getElementsByClassName("content")[lockedindex].style.visibility = "visible";
+						menu.dataset.activeIndex = lockedindex;
+					}
+				};
+			});
+	} else {
+		document.querySelector("body")
+			.dataset.ease = "false";
+		document.querySelector("body")
+			.style.opacity = "0";
+	}
 };
