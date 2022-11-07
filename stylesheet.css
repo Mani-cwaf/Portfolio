@@ -5,7 +5,7 @@ body {
 	transform:scale(100vw,100vh);
 	margin: 0;
 	padding: 0;
-	cursor: url(Cursors/Cursor-Arrow.png), default !important
+	cursor: url(Assets/Cursors/Cursor-Arrow.png), default !important
 }
 body[data-ease="true"] {
 	transition: opacity 750ms ease
@@ -118,7 +118,7 @@ body[data-ease="true"] {
 }
 .menu-item {
 	color: #fff;
-	cursor: url(Cursors/Cursor-Hand.png), default !important;
+	cursor: url(Assets/Cursors/Cursor-Hand.png), default !important;
 	display: inline-block;
 	padding: 5vh;
 	font-family: 'Rubik';
@@ -132,14 +132,33 @@ body[data-ease="true"] {
 	user-select: none
 }
 a {
-	color: #808080
+	color: rgba(128, 128, 128, 0.75);
 }
-a:hover {
-	cursor: url(Cursors/Cursor-Hand.png), default !important
-}
+
 a:visited {
-	color: #808080
+	color: rgba(128, 128, 128, 0.75);
 }
+
+a:hover {
+	color: rgba(128, 128, 128, 0.95);
+	cursor: url(Assets/Cursors/Cursor-Hand.png), default !important;
+}
+
+a:visited:hover {
+	color: rgba(128, 128, 128, 0.95);
+	cursor: url(Assets/Cursors/Cursor-Hand.png), default !important;
+}
+
+::-moz-selection {
+	color: white;
+	background-color: rgba(64, 128, 255, 0.75);
+}
+
+::selection {
+	color: white;
+	background-color: rgba(64, 128, 255, 0.75);
+}
+
 br {
 	line-height: 5px
 }
@@ -152,7 +171,7 @@ br {
 	user-select: none
 }
 span {
-	cursor: url(Cursors/Cursor-Pointer.png), default !important
+	cursor: url(Assets/Cursors/Cursor-Pointer.png), default !important
 }
 div,input,textarea,button,select,a {
 	-webkit-tap-highlight-color:rgba(0,0,0,0)
