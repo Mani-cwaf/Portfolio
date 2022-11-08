@@ -31,13 +31,13 @@ body[data-ease="true"] {
 	background-color: transparent
 }
 .content::-webkit-scrollbar-thumb {
-	background-color: #848484;
+	background-color: rgba(132, 132, 132, 0.85);
 	border-radius: 20px;
 	border: 6px solid transparent;
 	background-clip: content-box
 }
 .content::-webkit-scrollbar-thumb:hover {
-	background-color: #6d6c6c
+	background-color: rgba(108, 108, 108, 1)
 }
 #menu {
 	align-items:center;
