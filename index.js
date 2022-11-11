@@ -1,11 +1,10 @@
 document.onreadystatechange = () => {
 	if (document.readyState == "complete") {
 		setTimeout(() => {
-			document.querySelector("body")
-				.dataset.ease = "true";
-			document.querySelector("body")
-				.style.opacity = "1";
-		}, 750);
+			document.querySelector("body").dataset.ease = "true";
+			document.querySelector("html").dataset.cursor = "true";
+			document.querySelector("body").style.opacity = "1";
+		}, 1250);
 		const menu = document.getElementById("menu");
 		var locked = false;
 		var lockedindex;
@@ -59,9 +58,8 @@ document.onreadystatechange = () => {
 				};
 			});
 	} else {
-		document.querySelector("body")
-			.dataset.ease = "false";
-		document.querySelector("body")
-			.style.opacity = "0";
+		document.querySelector("body").dataset.ease = "false";
+		document.querySelector("html").dataset.cursor = "false"
+		document.querySelector("body").style.opacity = "0";
 	}
 };
