@@ -188,8 +188,6 @@ div,input,textarea,button,select,a {
 	font-family: 'Rubik';
     color: #fff;
 	z-index: 999;
-	font-size: 1.5rem;
-	bottom: -2vh;
     left: 0.25vw;
     right: 0px;
     margin: 0px;
@@ -229,6 +227,10 @@ div,input,textarea,button,select,a {
 	.content::-webkit-scrollbar-thumb:hover {
 		background-color: rgba(108, 108, 108, 1)
 	}
+	#footer {
+		bottom: -2vh;
+		font-size: 1.5rem;
+	}
 }
 @media (max-width:800px) {
 	.content {
@@ -244,5 +246,9 @@ div,input,textarea,button,select,a {
 	.menu-item {
 		font-size: clamp(1rem, 2.75vw, 8rem);
 		padding: clamp(0.1rem, 0.25vw, 1rem)
+	}
+	#footer {
+		bottom: -1vh;
+		font-size: .5rem;
 	}
 }
