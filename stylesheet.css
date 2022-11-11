@@ -6,9 +6,6 @@
 	--cursor-text: url("https://drive.google.com/uc?export=view&id=1K_J8DquKrh3hd_f0RTACplEQ95VNm6Vl");
 }
 
-html[data-cursor="false"] {
-	cursor: none !important
-}
 body {
 	background-color:#181818;
 	transform:scale(100vw,100vh);
@@ -16,10 +13,13 @@ body {
 	padding: 0;
 }
 body[data-ease="true"] {
-	transition: opacity 750ms ease;
+	transition: opacity 1250ms ease;
 	cursor: var(--cursor-pointer), default
 }
-
+body[data-ease="false"] {
+	transition: opacity 750ms ease;
+	cursor: none !important
+}
 .content {
 	position: fixed;
 	color: #fff;
@@ -44,17 +44,29 @@ body[data-ease="true"] {
 #menu-items {
 	z-index:2
 }
+#menu[data-active-index="5"] > #menu-background-pattern {
+	background-position:0 75%
+}
+#menu[data-active-index="4"] > #menu-background-pattern {
+	background-position:0 40%
+}
 #menu[data-active-index="3"] > #menu-background-pattern {
-	background-position:0 -15%
+	background-position:0 5%
 }
 #menu[data-active-index="2"] > #menu-background-pattern {
-	background-position:0 -50%
+	background-position:0 -30%
 }
 #menu[data-active-index="1"] > #menu-background-pattern {
-	background-position:0 -75%
+	background-position:0 -65%
 }
 #menu[data-active-index="0"] > #menu-background-pattern {
 	background-position:0 -100%
+}
+#menu[data-active-index="5"] > #menu-background-image {
+	background-position:center 35%
+}
+#menu[data-active-index="4"] > #menu-background-image {
+	background-position:center 40%
 }
 #menu[data-active-index="3"] > #menu-background-image {
 	background-position:center 45%
@@ -91,7 +103,7 @@ body[data-ease="true"] {
 	position:absolute;
 	top:0;
 	left:0;
-	transition: opacity 400ms ease, background-size 400ms ease, background-position 400ms ease;
+	transition: opacity 300ms ease, background-size 300ms ease, background-position 300ms ease;
 	width:100vw;
 	z-index:0
 }
@@ -184,6 +196,7 @@ div,input,textarea,button,select,a {
 	-ms-user-select: none;
 	user-select: none
 }
+
 @media (min-width:800px) {
 	.content {
 		top: 0vh;
@@ -198,9 +211,9 @@ div,input,textarea,button,select,a {
 		padding: clamp(0.1rem, 1vw, 2rem)
 	}
 	#footer {
-		font-size: 1rem;
+		font-size: 1.35rem;
 		padding: 1rem;
-		top: 93vh;
+		top: 92vh;
 	}
 	.content::-webkit-scrollbar {
 		width: 25px
