@@ -187,8 +187,12 @@ div,input,textarea,button,select,a {
 	position: fixed;
 	font-family: 'Rubik';
     color: #fff;
-    text-align: center;
-	z-index: 1;
+	z-index: 999;
+	font-size: 1.5rem;
+	bottom: -2vh;
+    left: 0.25vw;
+    right: 0px;
+    margin: 0px;
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
 	-khtml-user-select: none;
@@ -209,11 +213,6 @@ div,input,textarea,button,select,a {
 	.menu-item {
 		font-size: clamp(2rem, 3.5vw, 8rem);
 		padding: clamp(0.1rem, 1vw, 2rem)
-	}
-	#footer {
-		font-size: 1.35rem;
-		padding: 1rem;
-		top: 92vh;
 	}
 	.content::-webkit-scrollbar {
 		width: 25px
@@ -245,10 +244,5 @@ div,input,textarea,button,select,a {
 	.menu-item {
 		font-size: clamp(1rem, 2.75vw, 8rem);
 		padding: clamp(0.1rem, 0.25vw, 1rem)
-	}
-	#footer {
-		font-size: 0.5rem;
-		padding: 0.5rem;
-		top: 96vh;
 	}
 }
