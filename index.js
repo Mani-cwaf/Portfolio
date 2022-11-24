@@ -1,4 +1,11 @@
 $(document).ready(function() {
+    $(window).scroll(function() {
+        if (this.scrollY > 20) {
+            $('.l-header').addClass("sticky");
+        } else {
+            $('.l-header').removeClass("sticky");
+        }
+    });
     var typed = new Typed(".typing", {
         strings: ["Web Dev", "Game Dev", "Designer", "Student"],
         typeSpeed: 80,

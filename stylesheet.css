@@ -41,6 +41,8 @@ html {
 }
 
 body {
+    width: 100vw;
+    height: 100vh;
     margin: var(--header-height) 0 0 0;
     font-family: var(--body-font);
     font-size: var(--normal-font-size);
@@ -112,7 +114,9 @@ img {
     left: 0;
     z-index: var(--z-fixed);
     background-color: #fff;
-    box-shadow: 0 1px 4px rgba(146, 161, 176, .15)
+}
+.l-header.sticky {
+    box-shadow: 0 2px 4px rgba(146, 161, 176, .2)
 }
 
 .nav {
@@ -359,12 +363,10 @@ img {
         height: 100%;
         padding: 2rem;
         background-color: var(--second-color);
-        transition: 500ms
+        transition: 350ms
     }
     .l-header:has(.nav-toggle.active) ~ .l-main {
-        display: block;
         width: 80vw;
-        transition: all 500ms;
     }
 }
 
