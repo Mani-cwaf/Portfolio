@@ -1,89 +1,155 @@
 <!DOCTYPE html>
+<html lang="en">
 
-<html>
-  <head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet.css">
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
     <script src="index.js"></script>
     <title>My Portfolio</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="stylesheet.css">
-  </head>
-  <body>
-    <div id="menu">
-      <div id="menu-items">
-        <div><span data-locked="false" class="menu-item">Home</span></div>
-        <div><span data-locked="false" class="menu-item">Unity Games</span></div>
-        <div><span data-locked="false" class="menu-item">Discord</span></div>
-        <div><span data-locked="false" class="menu-item">BTD6 Mods</span></div>
-        <div><span data-locked="false" class="menu-item">Hour Of Code</span></div>
-        <div><span data-locked="false" class="menu-item">Source</span></div>
-      </div>
-  
-      <div class="content" id="Home">
-        <h3><span><b>Home</b></span></h3>
-        <p>
-          <span>Hi! My name is Mani. I like coding so I made this website to show off my projects.</span>
-        </p>
-      </div>
-      <div class="content" id="Unity Games">
-        <h3><span>Unity Games</span></h3>
-        <p><span>
-          <br> <b>Sustainable Cities:</b> <a href="https://github.com/Mani-cwaf/SustainableCitiesProject" target="_blank">https://github.com/Mani-cwaf/SustainableCitiesProject</a> 
-          <br><br> A simple city builder game revolving around the topic of sustainable cities for a school project.
-          <br><br> Web (online) version: <a href="https://mani-dev101.itch.io/sustainable-cities" target="_blank">Play</a>
-          <br><br> Windows (zip download) version: <a href="https://github.com/Mani-cwaf/SustainableCitiesProject/releases/latest/download/SustainableCitiesProject-Windows.zip">Download</a>
-          <br><br> Linux (zip download) version: <a href="https://github.com/Mani-cwaf/SustainableCitiesProject/releases/latest/download/SustainableCitiesProject-Linux.zip">Download</a>
-          <br><br><br> <b>Horror Maze:</b> <a href="https://github.com/Mani-cwaf/HorrorMazeProject" target="_blank">https://github.com/Mani-cwaf/HorrorMazeProject</a>
-          <br><br> The best horror game ever, trust me.
-          <br><br> Web (online) version: <a href="https://mani-dev101.itch.io/horror-maze" target="_blank">Play</a>
-          <br><br> Windows (zip download) version: <a href="https://github.com/Mani-cwaf/HorrorMazeProject/releases/latest/download/HorrorMazeProject-Windows.zip">Download</a>
-          <br><br> Linux (zip download) version: <a href="https://github.com/Mani-cwaf/HorrorMazeProject/releases/latest/download/HorrorMazeProject-Linux.zip">Download</a>
-          <br><br><br> <b>Laser Battle:</b> <a href="https://github.com/Mani-cwaf/LaserBattleProject" target="_blank">https://github.com/Mani-cwaf/LaserBattleProject  </a>
-          <br><br> The best shooter game ever, trust me.
-          <br><br> Web (online) version: <a href="https://mani-dev101.itch.io/horror-maze" target="_blank">Play</a>
-          <br><br> Windows (zip download) version: <a href="https://github.com/Mani-cwaf/HorrorMazeProject/releases/latest/download/HorrorMazeProject-Windows.zip">Download</a>
-          <br><br> Linux (zip download) version: <a href="https://github.com/Mani-cwaf/HorrorMazeProject/releases/latest/download/HorrorMazeProject-Linux.zip">Download</a>
-        </span></p>
-      </div>
-      <div class="content" id="Discord">
-        <h3><span><b>Discord Projects</b></span></h3>
-        <p><span>
-          These are my projects using the discord api or requests library, in Python.
-          <br><br><br> <b>Poll Bot</b>
-          <br><br> Source : <a target="_blank" href="https://github.com/Mani-cwaf/DiscordPollBot">Github</a>
-          <br><br> Invite Bot To your server : <a href="https://discord.com/api/oauth2/authorize?client_id=992445952533209198&permissions=8&scope=bot" target="_blank">Link</a>
-        </span></p>
-      </div>
-      <div class="content" id="BTD6 Mods">
-        <h3><span><b>BTD6 Mods</b></span></h3>
-        <p><span>
-          All my BTD6 mods: <a href="https://github.com/Mani-cwaf/BTD6Mods" target="_blank">https://github.com/Mani-cwaf/BTD6Mods</a> -
-          <br><br> <a href="https://github.com/Mani-cwaf/DarkMage" target="_blank">Dark Mage:</a> My first tower mod, it's similar to the wizard monkey, but has more powerful upgrades and a paragon. 
-          <br><br> <a href="https://github.com/Mani-cwaf/MrEnderTower" target="_blank">Mr Ender Tower</a> This mod is based on the youtuber Mr Ender, it's way too OP and just a funny mod I decided to make.
-          <br><br> <a href="https://github.com/Mani-cwaf/VanillaParagons" target="_blank">Vanilla Paragons</a> A mod where I show my take on what the paragons should be for every vanilla tower.
-          <br><br> <a href="https://github.com/Mani-cwaf/FunPackOfFunExperiments" target="_blank">Fun Pack Of Fun Experiments</a> A collection of fun towers in a pack, all of them toggleable.
-          <br><br> <a href="https://github.com/Mani-cwaf/OPTowers" target="_blank">OP Towers</a> Basically just memes, like a dart monkey that does trillions of damage.
-          <br><br> <a href="https://github.com/Mani-cwaf/BloonChipper" target="_blank">Bloon Chipper</a> One of the hardest towers to code I've made, the bloon chipper from BTD5.
-          <br><br> <a href="https://github.com/Mani-cwaf/StatMultiplier" target="_blank">Stat Multiplier</a> Allows you to modify every tower stat in the game.
-        </span></p>
-      </div>
-      <div class="content" id="Hour Of Code">
-        <h3><span><b>Hour Of Code</b></span></h3>
-        <p>
-            My new website to contribute to the hour of code movement - <a href="https://www.hourofcode.tk">https://www.hourofcode.tk</a>
-        </p>
-      </div>
-      <div class="content" id="Source">
-        <h3><span><b>Source</b></span></h3>
-        <p><span>Open source code for my site available <a href="https://github.com/Mani-cwaf/Portfolio" target="_blank">here</a></span></p>
-      </div>
-  
-      <div id="menu-background-pattern"></div>
-      <div id="menu-background-image"></div>
-    </div>
+</head>
 
-    <footer id="footer">
-      <p>© 2022 Manishankar Dhingra</p>
+<body>
+    <header class="l-header">
+        <nav class="nav bd-grid">
+            <div>
+                <a href="" class="nav-logo">My Portfolio</a>
+            </div>
+
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
+                    <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+                    <li class="nav-item"><a href="#links" class="nav-link">Links</a></li>
+                </ul>
+            </div>
+
+            <div class="nav-toggle" id="nav-toggle">
+                <i class='bx bx-menu'></i>
+            </div>
+        </nav>
+    </header>
+
+    <main class="l-main">
+        <div class="home bd-grid" id="home">
+            <div class="home-data">
+                <h1 class="home-title">Hi, I'm<br><span class="home-title-color">Manishankar Dhingra</span>,<br> And I'm
+                    a <span class="typing home-title-color"></span></h1>
+            </div>
+            <div class="home-img">
+                <img src="assets/profile.png" alt="">
+            </div>
+        </div>
+
+        <div class="about section " id="about">
+            <h2 class="section-title">About</h2>
+            <div class="about-container bd-grid">
+                <div class="about-img">
+                    <img src="assets/about.png" alt="">
+                </div>
+                <div>
+                    <h2 class="about-subtitle">I'm a Coding Master</h2>
+                    <p class="about-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate cum
+                        expedita quo culpa tempora, assumenda, quis fugiat ut voluptates soluta, aut earum nemo
+                        recusandae cumque perferendis! Recusandae alias accusamus atque.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="skills section" id="skills">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-container bd-grid">
+                <div>
+                    <h2 class="skills-subtitle">Profesional Skills</h2>
+                    <p class="skills-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit optio id vero
+                        amet, alias architecto consectetur error eum eaque sit.</p>
+                    <div class="skills-data">
+                        <div class="skills-names">
+                            <i class='bx bxl-html5 skills-icon'></i>
+                            <span class="skills-name">HTML5</span>
+                        </div>
+                        <div class="skills-bar skills-html">
+                        </div>
+                        <div>
+                            <span class="skills-percentage">90%</span>
+                        </div>
+                    </div>
+                    <div class="skills-data">
+                        <div class="skills-names">
+                            <i class='bx bxl-css3 skills-icon'></i>
+                            <span class="skills-name">CSS3</span>
+                        </div>
+                        <div class="skills-bar skills-css">
+                        </div>
+                        <div>
+                            <span class="skills-percentage">80%</span>
+                        </div>
+                    </div>
+                    <div class="skills-data">
+                        <div class="skills-names">
+                            <i class='bx bxl-javascript skills-icon'></i>
+                            <span class="skills-name">JAVASCRIPT</span>
+                        </div>
+                        <div class="skills-bar skills-js">
+                        </div>
+                        <div>
+                            <span class="skills-percentage">60%</span>
+                        </div>
+                    </div>
+                    <div class="skills-data">
+                        <div class="skills-names">
+                            <i class='bx bxs-paint skills-icon'></i>
+                            <span class="skills-name">PHP</span>
+                        </div>
+                        <div class="skills-bar skills-ux">
+                        </div>
+                        <div>
+                            <span class="skills-percentage">75%</span>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <img src="assets/skills.png" alt="" class="skills-img">
+                </div>
+            </div>
+        </div>
+
+        <div class="links section" id="links">
+            <h2 class="section-title">Links</h2>
+
+            <div class="links-container bd-grid">
+                <div class="links-img">
+                    <img src="assets/1.jpg" alt="">
+                </div>
+                <div class="links-img">
+                    <img src="assets/2.jpg" alt="">
+                </div>
+                <div class="links-img">
+                    <img src="assets/3.jpg" alt="">
+                </div>
+                <div class="links-img">
+                    <img src="assets/4.jpg" alt="">
+                </div>
+                <div class="links-img">
+                    <img src="assets/5.jpg" alt="">
+                </div>
+                <div class="links-img">
+                    <img src="assets/6.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="fake-footer">
+        <p>&#169; 2022 Manishankar Dhingra</p>
+    </div>
+    <footer class="footer">
+        <p>&#169; 2022 Manishankar Dhingra</p>
     </footer>
-  </body>
+</body>
+
 </html>
