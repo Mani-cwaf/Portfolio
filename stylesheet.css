@@ -1,14 +1,14 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;700&display=swap");
 
 :root {
     --header-height: 3rem;
     --font-semi: 600;
     --first-color: #4070F4;
     --second-color: #0E2431;
-    --body-font: 'Poppins', sans-serif;
-    --big-font-size: 2rem;
+    --body-font: 'Rubik', sans-serif;
+    --big-font-size: 1.5rem;
     --h2-font-size: 1.25rem;
-    --normal-font-size: 0.938rem;
+    --normal-font-size: 1rem;
     --mb-1: 0.5rem;
     --mb-2: 1rem;
     --mb-3: 1.5rem;
@@ -23,9 +23,9 @@
 
 @media screen and (min-width: 768px) {
     :root {
-        --big-font-size: 3.5rem;
-        --h2-font-size: 2rem;
-        --normal-font-size: 1rem
+        --big-font-size: 3rem;
+        --h2-font-size: 1.5rem;
+        --normal-font-size: 0.75rem
     }
 }
 
@@ -133,7 +133,8 @@ img {
 
 .nav-link {
     position: relative;
-    color: #fff
+    color: #fff;
+    font-size: medium;
 }
 
 .nav-link:hover {
@@ -162,6 +163,10 @@ img {
 	transform: translate(-50%, 0);
 }
 
+.nav-link:hover {
+    opacity: 0.8;
+}
+
 .active::before, .nav-link:hover::before {
     background-color: var(--first-color);
 	width: 100%;
@@ -177,7 +182,12 @@ img {
 }
 
 .nav-logo {
-    color: var(--second-color)
+    color: var(--second-color);
+    font-size: large
+}
+
+.nav-logo:hover {
+    opacity: 0.8;
 }
 
 .nav-toggle {
@@ -188,6 +198,11 @@ img {
 
 .nav:has(.nav-toggle.active) .nav-menu{
     right: 0%;
+}
+
+.l-main {
+    position: relative;
+    top: 8vh;
 }
 
 .show {
