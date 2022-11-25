@@ -7,7 +7,7 @@ $(document).ready(function() {
         }
     });
     var typed = new Typed(".typing", {
-        strings: ["Web Dev", "Game Dev", "Designer", "Student"],
+        strings: ["Web Dev", "Game Maker", "Designer", "Student"],
         typeSpeed: 80,
         backSpeed: 60,
         loop: true
