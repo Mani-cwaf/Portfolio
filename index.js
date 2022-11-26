@@ -1,5 +1,4 @@
 $(document).ready(function() {
-
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
             console.log(entry);
@@ -15,10 +14,16 @@ $(document).ready(function() {
     hiddenElements.forEach((el) => observer.observe(el));
 
     $(window).scroll(function() {
-        if (this.scrollY > 20) {
+        scroll = this.scrollY
+        if (scroll > 5) {
             $('.l-header').addClass("sticky");
         } else {
             $('.l-header').removeClass("sticky");
+        }
+        if ($(window).scrollTop() + $(window).height() > $(document).height()) {
+            $('.footer').addClass("sticky");
+        } else {
+            $('.footer').removeClass("sticky");
         }
     });
 
