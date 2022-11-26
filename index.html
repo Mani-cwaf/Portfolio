@@ -8,18 +8,18 @@
     <link href='https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
-    <script src="index.js"></script>
+    <script defer src="index.js"></script>
     <title>My Portfolio</title>
 </head>
 
 <body>
     <header class="l-header">
-        <nav class="nav bd-grid-nav">
+        <nav class="nav bd-grid-nav no-select">
             <div>
                 <a href="" class="nav-logo">My <span class="home-title-color">Portfolio</span></a>
             </div>
 
-            <div class="nav-menu" id="nav-menu">
+            <div class="nav-menu">
                 <ul class="nav-list">
                     <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
                     <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
@@ -28,7 +28,7 @@
                 </ul>
             </div>
 
-            <div class="nav-toggle" id="nav-toggle">
+            <div class="nav-toggle">
                 <i class='bx bx-menu'></i>
             </div>
         </nav>
@@ -37,22 +37,22 @@
     <main class="l-main">
         <div class="home bd-grid" id="home">
             <div class="home-data">
-                <h1 class="home-title">Hi, I'm<br><span class="home-title-color">Manishankar Dhingra</span>!<br> And I'm
+                <h1 class="home-title no-select hidden hidden-left">Hi, I'm<br><span class="home-title-color">Manishankar Dhingra</span>!<br> And I'm
                     a <span class="typing home-title-color"></span></h1>
             </div>
-            <div class="home-img">
-                <img src="assets/profile.png" alt="">
+            <div class="home-img no-select">
+                <img class="hidden hidden-right" src="assets/profile.png" alt="">
             </div>
         </div>
 
         <div class="about section " id="about">
-            <h2 class="section-title">About</h2>
-            <div class="about-container bd-grid">
+            <h2 class="section-title hidden hidden-left">About</h2>
+            <div class="about-container bd-grid hidden hidden-left">
                 <div class="about-img">
                     <img src="assets/about.png" alt="">
                 </div>
                 <div>
-                    <h2 class="about-subtitle">I'm a Coding Master</h2>
+                    <h2 class="subtitle">I'm a Coding Master</h2>
                     <p class="about-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate cum
                         expedita quo culpa tempora, assumenda, quis fugiat ut voluptates soluta, aut earum nemo
                         recusandae cumque perferendis! Recusandae alias accusamus atque.</p>
@@ -61,94 +61,94 @@
         </div>
 
         <div class="skills section" id="skills">
-            <h2 class="section-title">Skills</h2>
+            <h2 class="section-title hidden hidden-left">Skills</h2>
             <div class="skills-container bd-grid">
                 <div>
-                    <h2 class="skills-subtitle">Languages</h2>
-                    <div class="skills-data">
+                    <h2 class="subtitle hidden hidden-left">Languages</h2>
+                    <div class="skills-data hidden hidden-left">
                         <div class="skills-names">
                             <i class='bx bxl-html5 skills-icon'></i>
                             <span class="skills-name">HTML5</span>
                         </div>
-                        <div class="skills-bar skills-html">
+                        <div class="skills-bar skills-html" style="--percentage: 100%;">
                         </div>
                         <div>
-                            <span class="skills-percentage">80%</span>
+                            <span class="skills-percentage">100%</span>
                         </div>
                     </div>
-                    <div class="skills-data">
+                    <div class="skills-data hidden hidden-left">
                         <div class="skills-names">
                             <i class='bx bxl-css3 skills-icon'></i>
                             <span class="skills-name">CSS3</span>
                         </div>
-                        <div class="skills-bar skills-css">
+                        <div class="skills-bar skills-css" style="--percentage: 75%;">
                         </div>
                         <div>
                             <span class="skills-percentage">75%</span>
                         </div>
                     </div>
-                    <div class="skills-data">
+                    <div class="skills-data hidden hidden-left">
                         <div class="skills-names">
                             <i class='bx bxl-javascript skills-icon'></i>
                             <span class="skills-name">JAVASCRIPT</span>
                         </div>
-                        <div class="skills-bar skills-js">
+                        <div class="skills-bar" style="--percentage: 60%;">
                         </div>
                         <div>
                             <span class="skills-percentage">60%</span>
                         </div>
                     </div>
-                    <div class="skills-data">
+                    <div class="skills-data hidden hidden-left">
                         <div class="skills-names">
                             <i class='bx bxs-grid skills-icon'></i>
                             <span class="skills-name">C SHARP</span>
                         </div>
-                        <div class="skills-bar skills-csharp">
+                        <div class="skills-bar" style="--percentage: 90%;">
                         </div>
                         <div>
                             <span class="skills-percentage">90%</span>
                         </div>
                     </div>
-                    <h2 class="skills-subtitle">Tools</h2>
-                    <div class="skills-data">
+                    <h2 class="subtitle hidden hidden-left">Tools</h2>
+                    <div class="skills-data hidden hidden-left">
                         <div class="skills-names">
                             <i class='bx bxl-github skills-icon'></i>
                             <span class="skills-name">GITHUB</span>
                         </div>
-                        <div class="skills-bar skills-github">
+                        <div class="skills-bar" style="--percentage: 75%;">
                         </div>
                         <div>
-                            <span class="skills-percentage">80%</span>
+                            <span class="skills-percentage">75%</span>
                         </div>
                     </div>
-                    <div class="skills-data">
+                    <div class="skills-data hidden hidden-left">
                         <div class="skills-names">
                             <i class='bx bxl-unity skills-icon'></i>
                             <span class="skills-name">UNITY</span>
                         </div>
-                        <div class="skills-bar skills-unity">
+                        <div class="skills-bar" style="--percentage: 65%;">
                         </div>
                         <div>
                             <span class="skills-percentage">65%</span>
                         </div>
                     </div>
-                    <div class="skills-data">
+                    <div class="skills-data hidden hidden-left">
                         <div class="skills-names">
                             <i class='bx bxs-paint skills-icon'></i>
                             <span class="skills-name">PHOTOSHOP</span>
                         </div>
-                        <div class="skills-bar skills-photoshop">
+                        <div class="skills-bar" style="--percentage: 45%;">
                         </div>
                         <div>
-                            <span class="skills-percentage">40%</span>
+                            <span class="skills-percentage">45%</span>
                         </div>
                     </div>
-                    <div class="skills-data">
+                    <div class="skills-data hidden hidden-left">
                         <div class="skills-names">
                             <i class='bx bxl-visual-studio skills-icon'></i>
                             <span class="skills-name">VS CODE</span>
                         </div>
-                        <div class="skills-bar skills-vscode">
+                        <div class="skills-bar" style="--percentage: 80%;">
                         </div>
                         <div>
                             <span class="skills-percentage">80%</span>
@@ -156,32 +156,47 @@
                     </div>
                 </div>
                 <div>
-                    <img src="assets/skills.png" alt="" class="skills-img">
+                    <img src="assets/skills.png" alt="" class="skills-img hidden hidden-right">
                 </div>
             </div>
         </div>
 
-        <div class="projects section" id="projects">
-            <h2 class="section-title">Projects</h2>
-
+        <div class="projects section " id="projects">
+            <h2 class="section-title hidden hidden-left">Projects</h2>
             <div class="projects-container bd-grid">
-                <div class="projects-img">
-                    <img src="assets/1.jpg" alt="">
+                <div class="unity-games hidden hidden-right">
+                    <h2 class="subtitle hidden hidden-right">Unity Games</h2>
+                    <h3 class="hidden hidden-left"><span class="text-content"><br> Sustainable Cities: <a target="_blank" class="link" href="https://github.com/Mani-cwaf/SustainableCitiesProject">https://github.com/Mani-cwaf/SustainableCitiesProject</a> </span></h3>
+                    <p class="projects-text hidden hidden-left"><span class="text-content">
+                        A simple city builder game revolving around the topic of sustainable cities for a school project.
+                        <br><br> Web (online) version: <a target="_blank" class="link" href="https://mani-dev101.itch.io/sustainable-cities"><button><span class="link"><b>Play</b></span></button></a>
+                        <br><br> Windows (zip download) version: <a class="link" href="https://github.com/Mani-cwaf/SustainableCitiesProject/releases/latest/download/SustainableCitiesProject-Windows.zip"><button><span class="link"><b>Download</b></span></button></a>
+                        <br><br> Linux (zip download) version: <a class="link" href="https://github.com/Mani-cwaf/SustainableCitiesProject/releases/latest/download/SustainableCitiesProject-Linux.zip"><button><span class="link"><b>Download</b></span></button></a>
+                    </span></p>
+                    <h3 class="hidden hidden-left"><span class="text-content"><br> Horror Maze: <a target="_blank" class="link" href="https://github.com/Mani-cwaf/HorrorMazeProject">https://github.com/Mani-cwaf/HorrorMazeProject</a> </span></h3>
+                    <p class="projects-text hidden hidden-left"><span class="text-content">
+                        The best horror game ever, trust me.
+                        <br><br> Web (online) version: <a target="_blank" class="link" href="https://mani-dev101.itch.io/horror-maze"><button><span class="link"><b>Play</b></span></button></a>
+                        <br><br> Windows (zip download) version: <a class="link" href="https://github.com/Mani-cwaf/HorrorMazeProject/releases/latest/download/HorrorMazeProject-Windows.zip"><button><span class="link"><b>Download</b></span></button></a>
+                        <br><br> Linux (zip download) version: <a class="link" href="https://github.com/Mani-cwaf/HorrorMazeProject/releases/latest/download/HorrorMazeProject-Linux.zip"><button><span class="link"><b>Download</b></span></button></a>
+                    </span></p>
+                    <h3 class="hidden hidden-left"><span class="text-content"><br> Laser Battle: <a target="_blank" class="link" href="https://github.com/Mani-cwaf/LaserBattleProject">https://github.com/Mani-cwaf/LaserBattleProject</a> </span></h3>
+                    <p class="projects-text hidden hidden-left"><span class="text-content">
+                        The best shooter game ever, trust me.
+                        <br><br> Web (online) version: <a target="_blank" class="link" href="https://mani-dev101.itch.io/horror-maze"><button><span class="link"><b>Play</b></span></button></a>
+                        <br><br> Windows (zip download) version: <a class="link" href="https://github.com/Mani-cwaf/HorrorMazeProject/releases/latest/download/HorrorMazeProject-Windows.zip"><button><span class="link"><b>Download</b></span></button></a>
+                        <br><br> Linux (zip download) version: <a class="link" href="https://github.com/Mani-cwaf/HorrorMazeProject/releases/latest/download/HorrorMazeProject-Linux.zip"><button><span class="link"><b>Download</b></span></button></a>
+                    </span></p>
                 </div>
-                <div class="projects-img">
-                    <img src="assets/2.jpg" alt="">
-                </div>
-                <div class="projects-img">
-                    <img src="assets/3.jpg" alt="">
-                </div>
-                <div class="projects-img">
-                    <img src="assets/4.jpg" alt="">
-                </div>
-                <div class="projects-img">
-                    <img src="assets/5.jpg" alt="">
-                </div>
-                <div class="projects-img">
-                    <img src="assets/6.jpg" alt="">
+                <div class="discord hidden hidden-right">
+                    <h2 class="subtitle hidden hidden-right">Discord Projects</h2>
+                    <h3 class="hidden hidden-left"><span class="text-content"><br> These are my projects using the discord api or requests library, in Python. </span></h3>
+                    <h4 class="hidden hidden-left"><br> Poll Bot</h4>
+                    <p class="projects-text hidden hidden-left"><span class="text-content">
+                        A simple discord bot that allows you to create polls, and logs results after a given time period [WIP]
+                        <br><br> Source code: <a target="_blank" class="link" href="https://github.com/Mani-cwaf/DiscordPollBot"><button><span class="link"><b>Github</b></span></button></a>
+                        <br><br> Invite bot to your server: <a target="_blank" class="link" href="https://discord.com/api/oauth2/authorize?client_id=992445952533209198&permissions=8&scope=bot"><button><span class="link"><b>Link</b></span></button></a>
+                    </span></p>
                 </div>
             </div>
         </div>
@@ -193,7 +208,10 @@
     <footer class="footer">
         <p>&#169; 2022 Manishankar Dhingra</p>
         <div class="links">
-            <a href="https://github.com/Mani-cwaf" target="_blank" class="link"></a>
+            <a href="https://github.com/Mani-cwaf" target="_blank" class="link bxl-github"></a>
+        </div>
+        <div class="links">
+            <a href="https://github.com/Mani-cwaf" target="_blank" class="link bxl-twitch"></a>
         </div>
     </footer>
 </body>

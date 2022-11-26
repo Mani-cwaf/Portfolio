@@ -1,4 +1,19 @@
 $(document).ready(function() {
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            console.log(entry);
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+            } else {
+                entry.target.classList.remove('show');
+            }
+        });
+    });
+    
+    const hiddenElements = document.querySelectorAll('.hidden');
+    hiddenElements.forEach((el) => observer.observe(el));
+
     $(window).scroll(function() {
         if (this.scrollY > 20) {
             $('.l-header').addClass("sticky");
@@ -6,12 +21,11 @@ $(document).ready(function() {
             $('.l-header').removeClass("sticky");
         }
     });
-    var typed = new Typed(".typing", {
-        strings: ["Web Dev", "Game Maker", "Designer", "Student"],
-        typeSpeed: 80,
-        backSpeed: 60,
-        loop: true
+
+    new Typed(".typing", {
+        strings: ["Web Dev", "Game Maker", "Designer", "Student"], typeSpeed: 80, backSpeed: 60, loop: true
     });
+
     $('.nav-list li a').click(function(e) {
         $('.nav-list li a').removeClass('active');
         var $this = $(this);
@@ -27,4 +41,5 @@ $(document).ready(function() {
             $this.addClass('active'); 
         }
     });
+
 });
