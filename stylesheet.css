@@ -456,6 +456,66 @@ img {
     color: var(--first-color);
 }
 
+.timeline {
+    margin: 0 auto;
+    max-width: 1024px;
+    padding: 25px;
+    display: grid;
+    grid-template-columns: 1fr 3px 1fr;
+    font-family: "Fira Sans", sans-serif;
+    color: var(--second-color);
+  }
+  
+  .timeline-component {
+    margin: 0 20px 20px 20px;
+  }
+  
+  .timeline-component--bg {
+    padding: 1.5em;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+  }
+  
+  .timeline-component--bottom {
+    margin-bottom: 0;
+  }
+  
+  .timeline-middle {
+    position: relative;
+    background: var(--second-color);
+  }
+  
+  .timeline-point {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 15px;
+    height: 15px;
+    background: var(--second-color);
+    border-radius: 50%;
+  }
+  
+  .timeline-point--bottom {
+    top: initial;
+    bottom: 0;
+  }
+  
+  .timeline-date--right {
+    text-align: right;
+  }
+  
+  .timeline-title {
+    margin: 0;
+    font-size: 1.15em;
+    font-weight: bold;
+  }
+  
+  .timeline-paragraph {
+    line-height: 1.5;
+  }
+
 @media screen and (max-width: 768px) {
     .nav-menu {
         position: fixed;
