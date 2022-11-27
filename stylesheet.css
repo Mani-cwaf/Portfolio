@@ -38,6 +38,7 @@
 html {
     scroll-behavior: smooth;
     overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 body {
@@ -523,7 +524,11 @@ img {
 
 .container {
     width: 100vw;
-    overflow-x: hidden;
+    overflow: hidden;
+}
+
+.container ::-webkit-scrollbar {
+    width: 0;
 }
 
 @media screen and (max-width: 768px) {
