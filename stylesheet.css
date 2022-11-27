@@ -419,9 +419,9 @@ img {
     font-size: var(--mb-2);
 }
 
-.projects-container>* {
+.projects-container > * {
     margin-top: 5vh;
-    padding: .5rem 1rem;
+    padding: .5rem 0;
     box-shadow: 0 5px 25px rgba(14, 36, 49, .2);
 }
 
@@ -458,7 +458,6 @@ img {
 .timeline {
     margin: 0 auto;
     max-width: 1024px;
-    padding: 25px;
     display: grid;
     grid-template-columns: 1fr 3px 1fr;
     font-family: "Fira Sans", sans-serif;
@@ -470,7 +469,7 @@ img {
 }
 
 .timeline-component--bg {
-    padding: 1.5em;
+    padding: 0.5em;
     background: rgba(255, 255, 255, 0.2);
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
@@ -556,6 +555,14 @@ img {
 @media screen and (min-width: 768px) {
     body {
         margin: 0
+    }
+
+    .timeline {
+        padding: 25px;
+    }
+
+    .timeline-component--bg {
+        padding: 1.5em;
     }
 
     .section {
