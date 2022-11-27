@@ -219,7 +219,8 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-weight: var(--font-semi)
+    font-weight: var(--font-semi);
+    width: auto;
 }
 
 .nav-item {
@@ -521,15 +522,15 @@ img {
         position: fixed;
         top: var(--header-height);
         right: -100%;
-        width: auto;
+        width: 20vw;
         height: 100%;
         padding: 2rem;
         background-color: var(--second-color);
         transition: 350ms
     }
 
-    .l-header:has(.nav-toggle.active)~.l-main {
-        width: auto;
+    .l-header:has(.nav-toggle.active) ~ .l-main {
+        width: 80vw;
     }
 }
 
