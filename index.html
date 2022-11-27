@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <link rel="stylesheet" href="stylesheet.css">
     <link href='https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
@@ -13,335 +13,339 @@
 </head>
 
 <body>
-    <header class="l-header">
-        <nav class="nav bd-grid-nav no-select">
-            <div>
-                <a href="" class="nav-logo">My <span class="home-title-color">Portfolio</span></a>
-            </div>
-
-            <div class="nav-menu">
-                <ul class="nav-list">
-                    <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
-                    <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
-                    <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
-                </ul>
-            </div>
-
-            <div class="nav-toggle">
-                <i class='bx bx-menu'></i>
-            </div>
-        </nav>
-    </header>
-
-    <main class="l-main">
-        <div class="home bd-grid" id="home">
-            <div class="home-data">
-                <h1 class="home-title no-select hidden hidden-left" style="--animation-delay: 450ms">Hi, I'm<br><span
-                        class="home-title-color">Manishankar Dhingra</span>!<br> And I'm
-                    a <span class="typing home-title-color"></span></h1>
-            </div>
-            <div class="home-img no-select">
-                <img class="hidden hidden-right" style="--animation-delay: 600ms" src="assets/profile.png" alt="">
-            </div>
-        </div>
-
-        <div class="about section" id="about">
-            <h2 class="section-title hidden hidden-left" style="--animation-delay: 450ms">About</h2>
-            <div class="about-container bd-grid hidden hidden-left" style="--animation-delay: 450ms">
-                <div class="about-img">
-                    <img src="assets/about.png" alt="">
-                </div>
+    <div class="container">
+        <header class="l-header">
+            <nav class="nav bd-grid-nav no-select">
                 <div>
-                    <h2 class="subtitle">I'm a Coding Master</h2>
-                    <p class="about-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate cum
-                        expedita quo culpa tempora, assumenda, quis fugiat ut voluptates soluta, aut earum nemo
-                        recusandae cumque perferendis! Recusandae alias accusamus atque.</p>
+                    <a href="" class="nav-logo">My <span class="home-title-color">Portfolio</span></a>
+                </div>
+
+                <div class="nav-menu">
+                    <ul class="nav-list">
+                        <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                        <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                        <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+                        <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+                    </ul>
+                </div>
+
+                <div class="nav-toggle">
+                    <i class='bx bx-menu'></i>
+                </div>
+            </nav>
+        </header>
+
+        <main class="l-main">
+            <div class="home bd-grid" id="home">
+                <div class="home-data">
+                    <h1 class="home-title no-select hidden hidden-left" style="--animation-delay: 450ms">Hi,
+                        I'm<br><span class="home-title-color">Manishankar Dhingra</span>!<br> And I'm
+                        a <span class="typing home-title-color"></span></h1>
+                </div>
+                <div class="home-img no-select">
+                    <img class="hidden hidden-right" style="--animation-delay: 600ms" src="assets/profile.png" alt="">
                 </div>
             </div>
-        </div>
 
-        <div class="skills section" id="skills">
-            <h2 class="section-title hidden hidden-left" style="--animation-delay: 450ms">Skills</h2>
-            <div class="skills-container bd-grid">
-                <div>
-                    <h2 class="subtitle hidden hidden-left" style="--animation-delay: 450ms">Languages</h2>
-                    <div class="skills-data hidden hidden-left" style="--animation-delay: 450ms">
-                        <div class="skills-names">
-                            <i class='bx bxl-html5 skills-icon'></i>
-                            <span class="skills-name">HTML5</span>
-                        </div>
-                        <div class="skills-bar skills-html" style="--percentage: 100%;">
-                        </div>
-                        <div>
-                            <span class="skills-percentage">100%</span>
-                        </div>
+            <div class="about section" id="about">
+                <h2 class="section-title hidden hidden-left" style="--animation-delay: 450ms">About</h2>
+                <div class="about-container bd-grid hidden hidden-left" style="--animation-delay: 450ms">
+                    <div class="about-img">
+                        <img src="assets/about.png" alt="">
                     </div>
-                    <div class="skills-data hidden hidden-left" style="--animation-delay: 450ms">
-                        <div class="skills-names">
-                            <i class='bx bxl-css3 skills-icon'></i>
-                            <span class="skills-name">CSS3</span>
-                        </div>
-                        <div class="skills-bar skills-css" style="--percentage: 75%;">
-                        </div>
-                        <div>
-                            <span class="skills-percentage">75%</span>
-                        </div>
-                    </div>
-                    <div class="skills-data hidden hidden-left" style="--animation-delay: 450ms">
-                        <div class="skills-names">
-                            <i class='bx bxl-javascript skills-icon'></i>
-                            <span class="skills-name">JAVASCRIPT</span>
-                        </div>
-                        <div class="skills-bar" style="--percentage: 60%;">
-                        </div>
-                        <div>
-                            <span class="skills-percentage">60%</span>
-                        </div>
-                    </div>
-                    <div class="skills-data hidden hidden-left" style="--animation-delay: 450ms">
-                        <div class="skills-names">
-                            <i class='bx bxs-grid skills-icon'></i>
-                            <span class="skills-name">C SHARP</span>
-                        </div>
-                        <div class="skills-bar" style="--percentage: 90%;">
-                        </div>
-                        <div>
-                            <span class="skills-percentage">90%</span>
-                        </div>
-                    </div>
-                    <h2 class="subtitle hidden hidden-left" style="--animation-delay: 450ms">Tools</h2>
-                    <div class="skills-data hidden hidden-left" style="--animation-delay: 450ms">
-                        <div class="skills-names">
-                            <i class='bx bxl-github skills-icon'></i>
-                            <span class="skills-name">GITHUB</span>
-                        </div>
-                        <div class="skills-bar" style="--percentage: 75%;">
-                        </div>
-                        <div>
-                            <span class="skills-percentage">75%</span>
-                        </div>
-                    </div>
-                    <div class="skills-data hidden hidden-left" style="--animation-delay: 450ms">
-                        <div class="skills-names">
-                            <i class='bx bxl-unity skills-icon'></i>
-                            <span class="skills-name">UNITY</span>
-                        </div>
-                        <div class="skills-bar" style="--percentage: 65%;">
-                        </div>
-                        <div>
-                            <span class="skills-percentage">65%</span>
-                        </div>
-                    </div>
-                    <div class="skills-data hidden hidden-left" style="--animation-delay: 450ms">
-                        <div class="skills-names">
-                            <i class='bx bxs-paint skills-icon'></i>
-                            <span class="skills-name">PHOTOSHOP</span>
-                        </div>
-                        <div class="skills-bar" style="--percentage: 45%;">
-                        </div>
-                        <div>
-                            <span class="skills-percentage">45%</span>
-                        </div>
-                    </div>
-                    <div class="skills-data hidden hidden-left" style="--animation-delay: 450ms">
-                        <div class="skills-names">
-                            <i class='bx bxl-visual-studio skills-icon'></i>
-                            <span class="skills-name">VS CODE</span>
-                        </div>
-                        <div class="skills-bar" style="--percentage: 80%;">
-                        </div>
-                        <div>
-                            <span class="skills-percentage">80%</span>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <img src="assets/skills.png" alt="" class="skills-img hidden hidden-right"
-                        style="--animation-delay: 750ms">
-                </div>
-            </div>
-        </div>
-
-        <div class="projects section " id="projects">
-            <h2 class="section-title hidden hidden-left" style="--animation-delay: 450ms">Projects</h2>
-            <div class="projects-container bd-grid">
-                <div class="timeline">
-                    <div class="timeline-component">
-                        <div class="timeline-date timeline-date--right">August 21, 2021</div>
-                    </div>
-                    <div class="timeline-middle">
-                        <div class="timeline-point"></div>
-                    </div>
-                    <div class="timeline-component timeline-component--bg hidden hidden-right"
-                        style="--animation-delay: 750ms">
-                        <h2 class="timeline-title">First Coding Project: Ruby Items</h2>
-                        <p class="timeline-paragraph">
-                            <br> When I was 9 I wanted to make a minecraft mod, so I followed some tutorials and ended
-                            up figuring it out, years later I decided to improve apon it after actually learning java, I
-                            also uploaded it to github.
-                            <br><br> Web (online) version: <a target="_blank" class="link"
-                                href="https://mani-dev101.itch.io/sustainable-cities"><button><span
-                                        class="link"><b>Play</b></span></button></a>
-                            <br><br> Windows (zip download) version: <a class="link"
-                                href="https://github.com/Mani-cwaf/SustainableCitiesProject/releases/latest/download/SustainableCitiesProject-Windows.zip"><button><span
-                                        class="link"><b>Download</b></span></button></a>
-                            <br><br> Linux (zip download) version: <a class="link"
-                                href="https://github.com/Mani-cwaf/SustainableCitiesProject/releases/latest/download/SustainableCitiesProject-Linux.zip"><button><span
-                                        class="link"><b>Download</b></span></button></a>
-                        </p>
-                    </div>
-                    <div class="timeline-component timeline-component--bg hidden hidden-left"
-                        style="--animation-delay: 750ms">
-                        <h2 class="timeline-title">BTD6 Mods</h2>
-                        <p class="timeline-paragraph">
-                            <br> I created mods for a game called BTD6 in C#.
-                            <br><br> Dark Mage: My first tower mod, it's similar to the wizard monkey, but has more
-                            powerful upgrades and a paragon. <br> <a class="link" target="_blank"
-                                href="https://github.com/Mani-cwaf/DarkMage"><button><span
-                                        class="link"><b>Page</b></span></button></a> <a class="link" target="_blank"
-                                href=""><button><span class="link"><b>Download</b></span></button></a>
-                            <br><br> Mr Ender Tower: This mod is based on the youtuber Mr Ender, it's way too OP and
-                            just a funny mod I decided to make. <br> <a class="link" target="_blank"
-                                href="https://github.com/Mani-cwaf/MrEnderTower"><button><span
-                                        class="link"><b>Page</b></span></button></a> <a class="link" target="_blank"
-                                href=""><button><span class="link"><b>Download</b></span></button></a>
-                            <br><br> Vanilla Paragons: A mod where I show my take on what the paragons should be for
-                            every vanilla tower. <br> <a class="link" target="_blank"
-                                href="https://github.com/Mani-cwaf/VanillaParagons"><button><span
-                                        class="link"><b>Page</b></span></button></a> <a class="link" target="_blank"
-                                href=""><button><span class="link"><b>Download</b></span></button></a>
-                            <br><br> Fun Pack Of Fun Experiments: A collection of fun towers in a pack, all of them
-                            toggleable. <br> <a class="link" target="_blank"
-                                href="https://github.com/Mani-cwaf/FunPackOfFunExperiments"><button><span
-                                        class="link"><b>Page</b></span></button></a> <a class="link" target="_blank"
-                                href=""><button><span class="link"><b>Download</b></span></button></a>
-                            <br><br> OP Towers: Basically just memes, like a dart monkey that does trillions of damage.
-                            <br> <a class="link" target="_blank"
-                                href="https://github.com/Mani-cwaf/OPTowers"><button><span
-                                        class="link"><b>Page</b></span></button></a> <a class="link" target="_blank"
-                                href=""><button><span class="link"><b>Download</b></span></button></a>
-                            <br><br> Bloon Chipper: One of the hardest towers to code I've made, the bloon chipper from
-                            BTD5. <br> <a class="link" target="_blank"
-                                href="https://github.com/Mani-cwaf/BloonChipper"><button><span
-                                        class="link"><b>Page</b></span></button></a> <a class="link" target="_blank"
-                                href=""><button><span class="link"><b>Download</b></span></button></a>
-                            <br><br> Stat Multiplier: Allows you to modify every tower stat in the game. <br> <a
-                                class="link" target="_blank"
-                                href="https://github.com/Mani-cwaf/StatMultiplier"><button><span
-                                        class="link"><b>Page</b></span></button></a> <a class="link" target="_blank"
-                                href=""><button><span class="link"><b>Download</b></span></button></a>
-                        </p>
-                    </div>
-                    <div class="timeline-middle">
-                        <div class="timeline-point"></div>
-                    </div>
-                    <div class="timeline-component">
-                        <div class="timeline-date">September 16, 2022</div>
-                    </div>
-                    <div class="timeline-component">
-                        <div class="timeline-date timeline-date--right">August 9, 2022</div>
-                    </div>
-                    <div class="timeline-middle">
-                        <div class="timeline-point"></div>
-                    </div>
-                    <div class="timeline-component timeline-component--bg hidden hidden-right"
-                        style="--animation-delay: 750ms">
-                        <h2 class="timeline-title">First Unity Game: Sustainable Cities</h2>
-                        <p class="timeline-paragraph">
-                            <br> A simple city builder game revolving around the topic of sustainable cities for a
-                            school
-                            project.
-                            <br><br> Web (online) version: <a target="_blank" class="link"
-                                href="https://mani-dev101.itch.io/sustainable-cities"><button><span
-                                        class="link"><b>Play</b></span></button></a>
-                            <br><br> Windows (zip download) version: <a class="link"
-                                href="https://github.com/Mani-cwaf/SustainableCitiesProject/releases/latest/download/SustainableCitiesProject-Windows.zip"><button><span
-                                        class="link"><b>Download</b></span></button></a>
-                            <br><br> Linux (zip download) version: <a class="link"
-                                href="https://github.com/Mani-cwaf/SustainableCitiesProject/releases/latest/download/SustainableCitiesProject-Linux.zip"><button><span
-                                        class="link"><b>Download</b></span></button></a>
-                        </p>
-                    </div>
-                    <div class="timeline-component timeline-component--bg hidden hidden-left"
-                        style="--animation-delay: 750ms">
-                        <h2 class="timeline-title">Second Unity Game: Horror Maze</h2>
-                        <p class="timeline-paragraph">
-                            <br> The best horror game ever, trust me.
-                            <br><br> Web (online) version: <a target="_blank" class="link"
-                                href="https://mani-dev101.itch.io/horror-maze"><button><span
-                                        class="link"><b>Play</b></span></button></a>
-                            <br><br> Windows (zip download) version: <a class="link"
-                                href="https://github.com/Mani-cwaf/HorrorMazeProject/releases/latest/download/HorrorMazeProject-Windows.zip"><button><span
-                                        class="link"><b>Download</b></span></button></a>
-                            <br><br> Linux (zip download) version: <a class="link"
-                                href="https://github.com/Mani-cwaf/HorrorMazeProject/releases/latest/download/HorrorMazeProject-Linux.zip"><button><span
-                                        class="link"><b>Download</b></span></button></a>
-                        </p>
-                    </div>
-                    <div class="timeline-middle">
-                        <div class="timeline-point"></div>
-                    </div>
-                    <div class="timeline-component">
-                        <div class="timeline-date">September 16, 2022</div>
-                    </div>
-                    <div class="timeline-component">
-                        <div class="timeline-date timeline-date--right">October 29, 2022</div>
-                    </div>
-                    <div class="timeline-middle">
-                        <div class="timeline-point"></div>
-                    </div>
-                    <div class="timeline-component timeline-component--bg hidden hidden-right"
-                        style="--animation-delay: 750ms">
-                        <h2 class="timeline-title">First Shooter Game in Unity</h2>
-                        <p class="timeline-paragraph">
-                            <br> The best shooter game ever, trust me.
-                            <br><br> Web (online) version: <a target="_blank" class="link"
-                                href="https://mani-dev101.itch.io/horror-maze"><button><span
-                                        class="link"><b>Play</b></span></button></a>
-                            <br><br> Windows (zip download) version: <a class="link"
-                                href="https://github.com/Mani-cwaf/HorrorMazeProject/releases/latest/download/HorrorMazeProject-Windows.zip"><button><span
-                                        class="link"><b>Download</b></span></button></a>
-                            <br><br> Linux (zip download) version: <a class="link"
-                                href="https://github.com/Mani-cwaf/HorrorMazeProject/releases/latest/download/HorrorMazeProject-Linux.zip"><button><span
-                                        class="link"><b>Download</b></span></button></a>
-                        </p>
-                    </div>
-                    <div class="timeline-component timeline-component--bottom timeline-component--bg hidden hidden-left"
-                        style="--animation-delay: 750ms">
-                        <h2 class="timeline-title">Poll Bot</h2>
-                        <p class="timeline-paragraph">
-                            A simple discord bot that allows you to create polls, and logs results after a given time
-                            period [WIP]
-                            <br><br> Source code: <a target="_blank" class="link"
-                                href="https://github.com/Mani-cwaf/DiscordPollBot"><button><span
-                                        class="link"><b>Github</b></span></button></a>
-                            <br><br> Invite bot to your server: <a target="_blank" class="link"
-                                href="https://discord.com/api/oauth2/authorize?client_id=992445952533209198&permissions=8&scope=bot"><button><span
-                                        class="link"><b>Link</b></span></button></a>
-                        </p>
-                    </div>
-                    <div class="timeline-middle">
-                        <div class="timeline-point"></div>
-                    </div>
-                    <div class="timeline-component timeline-component--bottom">
-                        <div class="timeline-date">October 31, 2022
-
-
-
-                        </div>
+                    <div>
+                        <h2 class="subtitle">I'm a Coding Master</h2>
+                        <p class="about-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate cum
+                            expedita quo culpa tempora, assumenda, quis fugiat ut voluptates soluta, aut earum nemo
+                            recusandae cumque perferendis! Recusandae alias accusamus atque.</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </main>
 
-    <footer class="footer">
-        <p class="trademark">&#169; 2022 Manishankar Dhingra</p>
-        <div class="links">
-            <a href="https://github.com/Mani-cwaf" target="_blank" class="social-link"><i class="bx bxl-github"></i></a>
-        </div>
-    </footer>
+            <div class="skills section" id="skills">
+                <h2 class="section-title hidden hidden-left" style="--animation-delay: 450ms">Skills</h2>
+                <div class="skills-container bd-grid">
+                    <div>
+                        <h2 class="subtitle hidden hidden-left" style="--animation-delay: 450ms">Languages</h2>
+                        <div class="skills-data hidden hidden-left" style="--animation-delay: 450ms">
+                            <div class="skills-names">
+                                <i class='bx bxl-html5 skills-icon'></i>
+                                <span class="skills-name">HTML5</span>
+                            </div>
+                            <div class="skills-bar skills-html" style="--percentage: 100%;">
+                            </div>
+                            <div>
+                                <span class="skills-percentage">100%</span>
+                            </div>
+                        </div>
+                        <div class="skills-data hidden hidden-left" style="--animation-delay: 450ms">
+                            <div class="skills-names">
+                                <i class='bx bxl-css3 skills-icon'></i>
+                                <span class="skills-name">CSS3</span>
+                            </div>
+                            <div class="skills-bar skills-css" style="--percentage: 75%;">
+                            </div>
+                            <div>
+                                <span class="skills-percentage">75%</span>
+                            </div>
+                        </div>
+                        <div class="skills-data hidden hidden-left" style="--animation-delay: 450ms">
+                            <div class="skills-names">
+                                <i class='bx bxl-javascript skills-icon'></i>
+                                <span class="skills-name">JAVASCRIPT</span>
+                            </div>
+                            <div class="skills-bar" style="--percentage: 60%;">
+                            </div>
+                            <div>
+                                <span class="skills-percentage">60%</span>
+                            </div>
+                        </div>
+                        <div class="skills-data hidden hidden-left" style="--animation-delay: 450ms">
+                            <div class="skills-names">
+                                <i class='bx bxs-grid skills-icon'></i>
+                                <span class="skills-name">C SHARP</span>
+                            </div>
+                            <div class="skills-bar" style="--percentage: 90%;">
+                            </div>
+                            <div>
+                                <span class="skills-percentage">90%</span>
+                            </div>
+                        </div>
+                        <h2 class="subtitle hidden hidden-left" style="--animation-delay: 450ms">Tools</h2>
+                        <div class="skills-data hidden hidden-left" style="--animation-delay: 450ms">
+                            <div class="skills-names">
+                                <i class='bx bxl-github skills-icon'></i>
+                                <span class="skills-name">GITHUB</span>
+                            </div>
+                            <div class="skills-bar" style="--percentage: 75%;">
+                            </div>
+                            <div>
+                                <span class="skills-percentage">75%</span>
+                            </div>
+                        </div>
+                        <div class="skills-data hidden hidden-left" style="--animation-delay: 450ms">
+                            <div class="skills-names">
+                                <i class='bx bxl-unity skills-icon'></i>
+                                <span class="skills-name">UNITY</span>
+                            </div>
+                            <div class="skills-bar" style="--percentage: 65%;">
+                            </div>
+                            <div>
+                                <span class="skills-percentage">65%</span>
+                            </div>
+                        </div>
+                        <div class="skills-data hidden hidden-left" style="--animation-delay: 450ms">
+                            <div class="skills-names">
+                                <i class='bx bxs-paint skills-icon'></i>
+                                <span class="skills-name">PHOTOSHOP</span>
+                            </div>
+                            <div class="skills-bar" style="--percentage: 45%;">
+                            </div>
+                            <div>
+                                <span class="skills-percentage">45%</span>
+                            </div>
+                        </div>
+                        <div class="skills-data hidden hidden-left" style="--animation-delay: 450ms">
+                            <div class="skills-names">
+                                <i class='bx bxl-visual-studio skills-icon'></i>
+                                <span class="skills-name">VS CODE</span>
+                            </div>
+                            <div class="skills-bar" style="--percentage: 80%;">
+                            </div>
+                            <div>
+                                <span class="skills-percentage">80%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="assets/skills.png" alt="" class="skills-img hidden hidden-right"
+                            style="--animation-delay: 750ms">
+                    </div>
+                </div>
+            </div>
+
+            <div class="projects section " id="projects">
+                <h2 class="section-title hidden hidden-left" style="--animation-delay: 450ms">Projects</h2>
+                <div class="projects-container bd-grid">
+                    <div class="timeline">
+                        <div class="timeline-component">
+                            <div class="timeline-date timeline-date--right">August 21, 2021</div>
+                        </div>
+                        <div class="timeline-middle">
+                            <div class="timeline-point"></div>
+                        </div>
+                        <div class="timeline-component timeline-component--bg hidden hidden-right"
+                            style="--animation-delay: 750ms">
+                            <h2 class="timeline-title">First Coding Project: Ruby Items</h2>
+                            <p class="timeline-paragraph">
+                                <br> When I was 9 I wanted to make a minecraft mod, so I followed some tutorials and
+                                ended
+                                up figuring it out, years later I decided to improve apon it after actually learning
+                                java, I
+                                also uploaded it to github.
+                                <br><br> Web (online) version: <a target="_blank" class="link"
+                                    href="https://mani-dev101.itch.io/sustainable-cities"><button><span
+                                            class="link"><b>Play</b></span></button></a>
+                                <br><br> Windows (zip download) version: <a class="link"
+                                    href="https://github.com/Mani-cwaf/SustainableCitiesProject/releases/latest/download/SustainableCitiesProject-Windows.zip"><button><span
+                                            class="link"><b>Download</b></span></button></a>
+                                <br><br> Linux (zip download) version: <a class="link"
+                                    href="https://github.com/Mani-cwaf/SustainableCitiesProject/releases/latest/download/SustainableCitiesProject-Linux.zip"><button><span
+                                            class="link"><b>Download</b></span></button></a>
+                            </p>
+                        </div>
+                        <div class="timeline-component timeline-component--bg hidden hidden-left"
+                            style="--animation-delay: 750ms">
+                            <h2 class="timeline-title">BTD6 Mods</h2>
+                            <p class="timeline-paragraph">
+                                <br> I created mods for a game called BTD6 in C#.
+                                <br><br> Dark Mage: My first tower mod, it's similar to the wizard monkey, but has more
+                                powerful upgrades and a paragon. <br> <a class="link" target="_blank"
+                                    href="https://github.com/Mani-cwaf/DarkMage"><button><span
+                                            class="link"><b>Page</b></span></button></a> <a class="link" target="_blank"
+                                    href=""><button><span class="link"><b>Download</b></span></button></a>
+                                <br><br> Mr Ender Tower: This mod is based on the youtuber Mr Ender, it's way too OP and
+                                just a funny mod I decided to make. <br> <a class="link" target="_blank"
+                                    href="https://github.com/Mani-cwaf/MrEnderTower"><button><span
+                                            class="link"><b>Page</b></span></button></a> <a class="link" target="_blank"
+                                    href=""><button><span class="link"><b>Download</b></span></button></a>
+                                <br><br> Vanilla Paragons: A mod where I show my take on what the paragons should be for
+                                every vanilla tower. <br> <a class="link" target="_blank"
+                                    href="https://github.com/Mani-cwaf/VanillaParagons"><button><span
+                                            class="link"><b>Page</b></span></button></a> <a class="link" target="_blank"
+                                    href=""><button><span class="link"><b>Download</b></span></button></a>
+                                <br><br> Fun Pack Of Fun Experiments: A collection of fun towers in a pack, all of them
+                                toggleable. <br> <a class="link" target="_blank"
+                                    href="https://github.com/Mani-cwaf/FunPackOfFunExperiments"><button><span
+                                            class="link"><b>Page</b></span></button></a> <a class="link" target="_blank"
+                                    href=""><button><span class="link"><b>Download</b></span></button></a>
+                                <br><br> OP Towers: Basically just memes, like a dart monkey that does trillions of
+                                damage.
+                                <br> <a class="link" target="_blank"
+                                    href="https://github.com/Mani-cwaf/OPTowers"><button><span
+                                            class="link"><b>Page</b></span></button></a> <a class="link" target="_blank"
+                                    href=""><button><span class="link"><b>Download</b></span></button></a>
+                                <br><br> Bloon Chipper: One of the hardest towers to code I've made, the bloon chipper
+                                from
+                                BTD5. <br> <a class="link" target="_blank"
+                                    href="https://github.com/Mani-cwaf/BloonChipper"><button><span
+                                            class="link"><b>Page</b></span></button></a> <a class="link" target="_blank"
+                                    href=""><button><span class="link"><b>Download</b></span></button></a>
+                                <br><br> Stat Multiplier: Allows you to modify every tower stat in the game. <br> <a
+                                    class="link" target="_blank"
+                                    href="https://github.com/Mani-cwaf/StatMultiplier"><button><span
+                                            class="link"><b>Page</b></span></button></a> <a class="link" target="_blank"
+                                    href=""><button><span class="link"><b>Download</b></span></button></a>
+                            </p>
+                        </div>
+                        <div class="timeline-middle">
+                            <div class="timeline-point"></div>
+                        </div>
+                        <div class="timeline-component">
+                            <div class="timeline-date">September 16, 2022</div>
+                        </div>
+                        <div class="timeline-component">
+                            <div class="timeline-date timeline-date--right">August 9, 2022</div>
+                        </div>
+                        <div class="timeline-middle">
+                            <div class="timeline-point"></div>
+                        </div>
+                        <div class="timeline-component timeline-component--bg hidden hidden-right"
+                            style="--animation-delay: 750ms">
+                            <h2 class="timeline-title">First Unity Game: Sustainable Cities</h2>
+                            <p class="timeline-paragraph">
+                                <br> A simple city builder game revolving around the topic of sustainable cities for a
+                                school
+                                project.
+                                <br><br> Web (online) version: <a target="_blank" class="link"
+                                    href="https://mani-dev101.itch.io/sustainable-cities"><button><span
+                                            class="link"><b>Play</b></span></button></a>
+                                <br><br> Windows (zip download) version: <a class="link"
+                                    href="https://github.com/Mani-cwaf/SustainableCitiesProject/releases/latest/download/SustainableCitiesProject-Windows.zip"><button><span
+                                            class="link"><b>Download</b></span></button></a>
+                                <br><br> Linux (zip download) version: <a class="link"
+                                    href="https://github.com/Mani-cwaf/SustainableCitiesProject/releases/latest/download/SustainableCitiesProject-Linux.zip"><button><span
+                                            class="link"><b>Download</b></span></button></a>
+                            </p>
+                        </div>
+                        <div class="timeline-component timeline-component--bg hidden hidden-left"
+                            style="--animation-delay: 750ms">
+                            <h2 class="timeline-title">Second Unity Game: Horror Maze</h2>
+                            <p class="timeline-paragraph">
+                                <br> The best horror game ever, trust me.
+                                <br><br> Web (online) version: <a target="_blank" class="link"
+                                    href="https://mani-dev101.itch.io/horror-maze"><button><span
+                                            class="link"><b>Play</b></span></button></a>
+                                <br><br> Windows (zip download) version: <a class="link"
+                                    href="https://github.com/Mani-cwaf/HorrorMazeProject/releases/latest/download/HorrorMazeProject-Windows.zip"><button><span
+                                            class="link"><b>Download</b></span></button></a>
+                                <br><br> Linux (zip download) version: <a class="link"
+                                    href="https://github.com/Mani-cwaf/HorrorMazeProject/releases/latest/download/HorrorMazeProject-Linux.zip"><button><span
+                                            class="link"><b>Download</b></span></button></a>
+                            </p>
+                        </div>
+                        <div class="timeline-middle">
+                            <div class="timeline-point"></div>
+                        </div>
+                        <div class="timeline-component">
+                            <div class="timeline-date">September 16, 2022</div>
+                        </div>
+                        <div class="timeline-component">
+                            <div class="timeline-date timeline-date--right">October 29, 2022</div>
+                        </div>
+                        <div class="timeline-middle">
+                            <div class="timeline-point"></div>
+                        </div>
+                        <div class="timeline-component timeline-component--bg hidden hidden-right"
+                            style="--animation-delay: 750ms">
+                            <h2 class="timeline-title">First Shooter Game in Unity</h2>
+                            <p class="timeline-paragraph">
+                                <br> The best shooter game ever, trust me.
+                                <br><br> Web (online) version: <a target="_blank" class="link"
+                                    href="https://mani-dev101.itch.io/horror-maze"><button><span
+                                            class="link"><b>Play</b></span></button></a>
+                                <br><br> Windows (zip download) version: <a class="link"
+                                    href="https://github.com/Mani-cwaf/HorrorMazeProject/releases/latest/download/HorrorMazeProject-Windows.zip"><button><span
+                                            class="link"><b>Download</b></span></button></a>
+                                <br><br> Linux (zip download) version: <a class="link"
+                                    href="https://github.com/Mani-cwaf/HorrorMazeProject/releases/latest/download/HorrorMazeProject-Linux.zip"><button><span
+                                            class="link"><b>Download</b></span></button></a>
+                            </p>
+                        </div>
+                        <div class="timeline-component timeline-component--bottom timeline-component--bg hidden hidden-left"
+                            style="--animation-delay: 750ms">
+                            <h2 class="timeline-title">Poll Bot</h2>
+                            <p class="timeline-paragraph">
+                                A simple discord bot that allows you to create polls, and logs results after a given
+                                time
+                                period [WIP]
+                                <br><br> Source code: <a target="_blank" class="link"
+                                    href="https://github.com/Mani-cwaf/DiscordPollBot"><button><span
+                                            class="link"><b>Github</b></span></button></a>
+                                <br><br> Invite bot to your server: <a target="_blank" class="link"
+                                    href="https://discord.com/api/oauth2/authorize?client_id=992445952533209198&permissions=8&scope=bot"><button><span
+                                            class="link"><b>Link</b></span></button></a>
+                            </p>
+                        </div>
+                        <div class="timeline-middle">
+                            <div class="timeline-point"></div>
+                        </div>
+                        <div class="timeline-component timeline-component--bottom">
+                            <div class="timeline-date">October 31, 2022</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p class="trademark">&#169; 2022 Manishankar Dhingra</p>
+            <div class="links">
+                <a href="https://github.com/Mani-cwaf" target="_blank" class="social-link"><i
+                        class="bx bxl-github"></i></a>
+            </div>
+        </footer>
+    </div>
 </body>
 
 </html>
