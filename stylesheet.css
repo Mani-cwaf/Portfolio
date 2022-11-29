@@ -469,10 +469,6 @@ img {
     border-radius: 10px;
 }
 
-.timeline-component--bottom {
-    margin-bottom: 0;
-}
-
 .timeline-middle {
     position: relative;
     background: var(--second-color);
