@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
             console.log(entry);
@@ -9,11 +9,11 @@ $(document).ready(function() {
             }
         });
     });
-    
+
     const hiddenElements = document.querySelectorAll('.hidden');
     hiddenElements.forEach((el) => observer.observe(el));
 
-    $(window).scroll(function() {
+    $(window).scroll(function () {
         scroll = this.scrollY
         if (scroll > 5) {
             $('.l-header').addClass("sticky");
@@ -31,19 +31,17 @@ $(document).ready(function() {
         strings: ["Web Dev", "Game Maker", "Designer", "Student"], typeSpeed: 80, backSpeed: 60, loop: true
     });
 
-    $('.nav-list li a').click(function(e) {
+    $('.nav-list li a').click(function (e) {
         $('.nav-list li a').removeClass('active');
-        var $this = $(this);
-        if (!$this.hasClass('active')) {
-            $this.addClass('active');
+        if (!$(this).hasClass('active')) {
+            $(this).addClass('active');
         }
     });
-    $('.nav-toggle').click(function(e) {
-        var $this = $(this);
-        if ($this.hasClass('active')) {
-            $this.removeClass('active');
+    $('.nav-toggle').click(function (e) {
+        if ($(this).hasClass('active')) {
+            $(this).removeClass('active');
         } else {
-            $this.addClass('active'); 
+            $(this).addClass('active');
         }
     });
 
