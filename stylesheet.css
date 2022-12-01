@@ -4,7 +4,7 @@
     --header-height: 3rem;
     --font-semi: 600;
     --first-color: #4070F4;
-    --second-color: #0E2431;
+    --second-color: #0c283a;
     --body-font: 'Rubik', sans-serif;
     --big-font-size: 1.5rem;
     --h2-font-size: 1.25rem;
@@ -294,6 +294,31 @@ img {
     cursor: pointer
 }
 
+.nav-toggle .line {
+    transition: y 150ms ease-in 150ms, rotate 150ms ease-in, opacity 0ms 150ms;
+    transform-origin: center;
+}
+
+.nav-toggle.active .line {
+    transition: y 150ms ease-in, rotate 150ms ease-in 150ms, opacity 0ms 150ms;
+}
+
+.nav-toggle.active :is(.top, .bottom) {
+    y: 45px;
+}
+
+.nav-toggle.active .top {
+    rotate: 45deg;
+}
+
+.nav-toggle.active .middle {
+    opacity: 0;
+}
+
+.nav-toggle.active .bottom {
+    rotate: -45deg;
+}
+
 .nav:has(.nav-toggle.active) .nav-menu {
     right: 0%;
 }
@@ -532,27 +557,34 @@ img {
     width: 100%;
     bottom: 0;
     transform: translateY(100%);
-    transition: all 250ms;
+    transition: transform 250ms;
 }
 
 @media screen and (max-width: 768px) {
     .nav-menu {
         position: fixed;
         top: var(--header-height);
+        font-size: 0.5rem;
         right: -100%;
-        width: 20vw;
+        width: 25vw;
         height: 100%;
-        padding: 2rem;
+        padding: 1rem;
         background-color: var(--second-color);
-        transition: 350ms
+        transition: 350ms;
+        z-index: 3;
+    }
+
+    .nav-list {
+        text-align: center;
     }
 
     .l-header:has(.nav-toggle.active)~.l-main {
-        width: 80vw;
+        filter: blur(1.5px);
+        opacity: 0.95
     }
 
     .home {
-        height: calc(60vh - 3rem);
+        height: calc(70vh - 3rem);
     }
 
     .about-img {
