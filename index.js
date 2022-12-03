@@ -2,6 +2,10 @@ if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').match
     $('.toggle-dark-mode').addClass('active')
     $('.toggle-dark-mode').addClass('bxs-bulb')
     $('.toggle-dark-mode').removeClass('bx-bulb')
+} else {
+    $('.toggle-dark-mode').removeClass('active')
+    $('.toggle-dark-mode').addClass('bx-bulb')
+    $('.toggle-dark-mode').removeClass('bxs-bulb')
 }
 
 window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
