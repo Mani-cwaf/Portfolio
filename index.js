@@ -28,7 +28,7 @@ $(document).ready(function () {
     });
 
     new Typed(".typing", {
-        strings: ["Web Dev", "Game Maker", "Designer", "Student"], typeSpeed: 80, backSpeed: 60, loop: true
+        strings: ["Web Dev", "Designer", "Game Dev", "Student"], typeSpeed: 80, backSpeed: 60, loop: true
     });
 
     $('.nav-list li a').click(function (e) {
