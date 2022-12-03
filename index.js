@@ -37,7 +37,7 @@ $(document).ready(function () {
             $(this).addClass('active');
         }
     });
-    $('.nav-toggle').click(function (e) {
+    $('.toggle').click(function (e) {
         if ($(this).hasClass('active')) {
             $(this).removeClass('active');
         } else {
