@@ -1,24 +1,6 @@
-if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    $('.toggle-dark-mode').addClass('active')
-    $('.toggle-dark-mode').addClass('bxs-bulb')
-    $('.toggle-dark-mode').removeClass('bx-bulb')
-} else {
-    $('.toggle-dark-mode').removeClass('active')
-    $('.toggle-dark-mode').addClass('bx-bulb')
-    $('.toggle-dark-mode').removeClass('bxs-bulb')
-}
-
-window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
-    if (event.matches) {
-        $('.toggle-dark-mode').addClass('active')
-    } else {
-        $('.toggle-dark-mode').removeClass('active')
-    }
-});
-
+//observes whether an element with the hidden class is visible on screen, and gives it the show class if it is.
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
-        console.log(entry);
         if (entry.isIntersecting) {
             entry.target.classList.add('show');
         } else {
@@ -26,49 +8,75 @@ const observer = new IntersectionObserver((entries) => {
         }
     });
 });
+document.querySelectorAll('.hidden').forEach((el) => observer.observe(el));
 
-const hiddenElements = document.querySelectorAll('.hidden');
-hiddenElements.forEach((el) => observer.observe(el));
+//creates typing text using the typing.js library
+new Typed('.typing', {
+    strings: ['Web Dev', 'Designer', 'Game Dev', 'Student'], typeSpeed: 80, backSpeed: 60, loop: true
+});
 
-$(window).scroll(function () {
-    scroll = this.scrollY
-    if (scroll > 5) {
-        $('.l-header').addClass("sticky");
+const dmt = document.querySelector('.dark-mode-toggle');
+//gives the dark mode toggle element the active class to set the page to dark mode, and gives it a filled in bulb instead of a hollow one.
+const Dark = () => {
+    dmt.classList.add('active')
+    dmt.classList.add('bxs-bulb')
+    dmt.classList.remove('bx-bulb')
+}
+//vice versa for light mode
+const Light = () => {
+    dmt.classList.remove('active');
+    dmt.classList.add('bx-bulb');
+    dmt.classList.remove('bxs-bulb');
+}
+//function to detect the current browser theme to decide the default mode, and runs it on site load
+const ThemeChecker = () => {
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        Dark();
     } else {
-        $('.l-header').removeClass("sticky");
+        Light();
     }
-    if ($(window).scrollTop() + $(window).height() > $(document).height()) {
-        $('.footer').addClass("sticky");
+}
+ThemeChecker();
+//detects a change in the current browser theme to decide the default mode
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+    ThemeChecker();
+});
+//changes site theme when toggle is clicked on
+dmt.addEventListener('click', () => {
+    if (dmt.classList.contains('active')) {
+        Light();
     } else {
-        $('.footer').removeClass("sticky");
+        Dark();
+    }
+});
+//makes mobile version's navbar menu toggle active on click
+const nt = document.querySelector('.nav-toggle');
+nt.addEventListener('click', () => {
+    if (nt.classList.contains('active')) {
+        nt.classList.remove('active');
+    } else {
+        nt.classList.add('active');
     }
 });
 
-new Typed(".typing", {
-    strings: ["Web Dev", "Designer", "Game Dev", "Student"], typeSpeed: 80, backSpeed: 60, loop: true
-});
+//adds the active class to the tabs in the navbar that have been clicked on
+nls = document.querySelectorAll('.nav-link');
+nls.forEach((e) => {
+    e.addEventListener('click', () => {
+        nls.forEach((e) => {
+            e.classList.remove('active');
+        })
+        e.classList.add('active');
+    });
+})
 
-$('.nav-list li a').click(function (e) {
-    $('.nav-list li a').removeClass('active');
-    if (!$(this).hasClass('active')) {
-        $(this).addClass('active');
-    }
-});
-$('.nav-toggle').click(function (e) {
-    if ($(this).hasClass('active')) {
-        $(this).removeClass('active');
+//adds the sticky class to the navbar and footer when the user starts to scroll
+window.addEventListener('scroll', () => {
+    if (this.scrollY > 0) {
+        document.querySelector('.l-header').classList.add('sticky');
+        document.querySelector('.footer').classList.add('sticky');
     } else {
-        $(this).addClass('active');
-    }
-});
-$('.toggle-dark-mode').click(function (e) {
-    if ($(this).hasClass('active')) {
-        $(this).removeClass('active');
-        $('.toggle-dark-mode').addClass('bx-bulb')
-        $('.toggle-dark-mode').removeClass('bxs-bulb')
-    } else {
-        $(this).addClass('active');
-        $('.toggle-dark-mode').addClass('bxs-bulb')
-        $('.toggle-dark-mode').removeClass('bx-bulb')
+        document.querySelector('.l-header').classList.remove('sticky');
+        document.querySelector('.footer').classList.remove('sticky');
     }
 });
