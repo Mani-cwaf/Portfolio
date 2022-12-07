@@ -15,7 +15,7 @@ new Typed('.typing', {
     strings: ['Web Dev', 'Designer', 'Game Dev', 'Student'], typeSpeed: 80, backSpeed: 60, loop: true
 });
 
-const dmt = document.querySelector('.dark-mode-toggle');
+const dmt = document.querySelector('.dark-mode-toggle i');
 //gives the dark mode toggle element the active class to set the page to dark mode, and gives it a filled in bulb instead of a hollow one.
 const Dark = () => {
     dmt.classList.add('active')
@@ -42,13 +42,13 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () 
     ThemeChecker();
 });
 //changes site theme when toggle is clicked on
-dmt.addEventListener('click', () => {
+const dmtOnClick = () => {
     if (dmt.classList.contains('active')) {
         Light();
     } else {
         Dark();
     }
-});
+};
 //makes mobile version's navbar menu toggle active on click
 const nt = document.querySelector('.nav-toggle');
 nt.addEventListener('click', () => {
@@ -60,15 +60,23 @@ nt.addEventListener('click', () => {
 });
 
 //adds the active class to the tabs in the navbar that have been clicked on
-nls = document.querySelectorAll('.nav-link');
+const nls = document.querySelectorAll('.nav-link');
 nls.forEach((e) => {
     e.addEventListener('click', () => {
-        nls.forEach((e) => {
-            e.classList.remove('active');
+        nls.forEach((j) => {
+            j.classList.remove('active');
         })
         e.classList.add('active');
     });
 })
+
+//checks if the body of the page is clicked while the mobile navbar dropdown is active, to close the dropdown when the main body is focused on
+const lm = document.querySelector('.l-main');
+lm.addEventListener('click', () => {
+    if (nt.classList.contains('active')) {
+        nt.classList.remove('active');
+    }
+});
 
 //adds the sticky class to the navbar and footer when the user starts to scroll
 window.addEventListener('scroll', () => {
