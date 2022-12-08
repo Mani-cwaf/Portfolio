@@ -7,7 +7,7 @@
     --second-color: #0c283a;
     --box-shadow-color: rgba(0, 0, 0, .2);
     --first-background-color: #fff;
-    --second-background-color: #fff;
+    --second-background-color: rgb(240, 240, 240);
     --body-font: 'Rubik', sans-serif;
     --big-font-size: 1.5rem;
     --h2-font-size: 1.25rem;
@@ -528,8 +528,9 @@ img {
     position: relative;
     display: flex;
     justify-content: space-between;
-    background-color: var(--second-color);
-    color: var(--second-background-color);
+    background-color: var(--second-background-color);
+    color: var(--first-color);
+    box-shadow: 0 4px 12px var(--box-shadow-color);
     font-size: 2vh;
     text-align: center;
     font-weight: 700;
@@ -548,7 +549,7 @@ img {
 
 .social-link {
     font-size: 3vh;
-    color: var(--second-background-color);
+    color: var(--first-color);
 }
 
 .social-link:hover {
