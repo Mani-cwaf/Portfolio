@@ -12,7 +12,7 @@ document.querySelectorAll('.hidden').forEach((el) => observer.observe(el));
 
 //creates typing text using the typing.js library
 new Typed('.typing', {
-    strings: ['Web Dev', 'Designer', 'Game Dev', 'Student'], typeSpeed: 80, backSpeed: 60, loop: true
+    strings: ['Web Dev', 'Designer', 'Game Dev', 'Student'], typeSpeed: 85, backSpeed: 60, loop: true
 });
 
 const dmt = document.querySelector('.dark-mode-toggle i');

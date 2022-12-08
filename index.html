@@ -4,9 +4,12 @@
 <head>
     <meta charset='UTF-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0, shrink-to-fit=no'>
+    <meta name="description" content="My Portfolio.">
+    <meta name="theme-color" content="#4070F4" />
     <link rel='stylesheet' href='stylesheet.css'>
-    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css'>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js'></script>
+    <link rel='preload' href='https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css' as='style'
+        onload="this.onload = null; this.rel = 'stylesheet'">
+    <script defer src='https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js'></script>
     <script defer src='index.js'></script>
     <title>My Portfolio</title>
 </head>
@@ -17,7 +20,9 @@
             <nav class='nav bd-grid-nav no-select'>
                 <div>
                     <a href='' class='nav-logo'>My <span class='home-title-color'>Portfolio</span></a>
-                    <button onclick="dmtOnClick()" class="invisible dark-mode-toggle"><i class='bx'></i></button>
+                    <button onclick='dmtOnClick()' class='invisible dark-mode-toggle' aria-label="Dark Mode Toggle">
+                        <i class='bx'></i>
+                    </button>
                 </div>
 
                 <div class='nav-menu'>
@@ -47,7 +52,8 @@
                         a <span class='typing home-title-color'></span></h1>
                 </div>
                 <div class='home-img no-select'>
-                    <img class='hidden hidden-right' style='--animation-delay: 400ms' src='assets/profile.png' alt=''>
+                    <img class='hidden hidden-right' style='--animation-delay: 400ms' src='assets/profile.webp'
+                        alt='profile' width="auto" height="auto">
                 </div>
             </div>
 
@@ -55,7 +61,7 @@
                 <h2 class='section-title hidden hidden-left' style='--animation-delay: 350ms'>About</h2>
                 <div class='about-container bd-grid hidden hidden-left' style='--animation-delay: 350ms'>
                     <div class='about-img'>
-                        <img src='assets/about.png' alt=''>
+                        <img src='assets/about.webp' alt='about' width="auto" height="auto">
                     </div>
                     <div>
                         <h2 class='subtitle'>I'm a Coding Master</h2>
@@ -173,8 +179,8 @@
                         </div>
                     </div>
                     <div>
-                        <img src='assets/skills.png' alt='' class='skills-img hidden hidden-right'
-                            style='--animation-delay: 550ms'>
+                        <img src='assets/skills.webp' alt='skills' class='skills-img hidden hidden-right' width="auto"
+                            height="auto" style='--animation-delay: 550ms'>
                     </div>
                 </div>
             </div>
@@ -375,8 +381,9 @@
         <footer class='footer'>
             <p class='trademark'>&#169; 2022 Manishankar Dhingra</p>
             <div class='links'>
-                <a href='https://github.com/Mani-cwaf' target='_blank' class='social-link'><i
-                        class='bx bxl-github'></i></a>
+                <a href='https://github.com/Mani-cwaf' target='_blank' class='social-link' aria-label="Github Link">
+                    <i class='bx bxl-github'></i>
+                </a>
             </div>
         </footer>
     </div>
