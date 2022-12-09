@@ -6,8 +6,12 @@
     <meta name='viewport' content='width=device-width, initial-scale=1.0, shrink-to-fit=no'>
     <meta name="description" content="My Portfolio.">
     <meta name="theme-color" content="#4070F4" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel='stylesheet' href='stylesheet.css'>
-    <link rel='stylesheet' href='assets/boxicons/css/boxicons.min.css'>
+    <link rel='preload' href='assets/boxicons/css/boxicons.min.css' as='style'
+        onload="this.onload = null; this.rel = 'stylesheet';">
     <script defer src='https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js'></script>
     <script defer src='index.js'></script>
     <title>My Portfolio</title>
@@ -18,7 +22,7 @@
         <header class='l-header'>
             <nav class='nav bd-grid-nav no-select'>
                 <div>
-                    <a href='' class='nav-logo'>My <span class='home-title-color'>Portfolio</span></a>
+                    <span class='nav-logo'>My <span class='home-title-color'>Portfolio</span></span>
                     <button onclick='dmtOnClick()' class='invisible dark-mode-toggle' aria-label="Dark Mode Toggle">
                         <i class='bx'></i>
                     </button>
@@ -60,7 +64,7 @@
                 <h2 class='section-title hidden hidden-left' style='--animation-delay: 350ms'>About</h2>
                 <div class='about-container bd-grid hidden hidden-left' style='--animation-delay: 350ms'>
                     <div class='about-img'>
-                        <img src='assets/about.webp' alt='about' width="1000" height="1000">
+                        <img src='assets/about.webp' alt='about' width="1000" height="828">
                     </div>
                     <div>
                         <h2 class='subtitle'>I'm a Coding Master</h2>

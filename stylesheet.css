@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;700&display=swap');
-
 :root {
     --header-height: 3rem;
     --font-semi: 600;
@@ -33,8 +31,8 @@
 }
 
 :root:has(.dark-mode-toggle i.active) {
-    --first-background-color: rgb(24, 24, 24);
-    --second-background-color: rgb(30, 30, 30);
+    --first-background-color: rgb(16, 16, 16);
+    --second-background-color: rgb(20, 20, 20);
     --first-color: rgb(118, 149, 236);
     --second-color: rgb(40, 97, 255);
     --box-shadow-color: rgba(255, 255, 255, 0.2);
@@ -307,14 +305,9 @@ img {
 }
 
 .nav-logo {
+    display: inline-block;
     color: var(--second-color);
     font-size: x-large
-}
-
-.nav-logo:hover {
-    display: inline-block;
-    opacity: 0.8;
-    scale: 105%;
 }
 
 .show {
