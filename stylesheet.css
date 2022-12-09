@@ -3,11 +3,11 @@
 :root {
     --header-height: 3rem;
     --font-semi: 600;
-    --first-color: #4070F4;
-    --second-color: #0c283a;
+    --first-color: rgb(40, 97, 255);
+    --second-color: rgb(13, 16, 63);
     --box-shadow-color: rgba(0, 0, 0, .2);
     --first-background-color: #fff;
-    --second-background-color: rgb(240, 240, 240);
+    --second-background-color: rgb(247, 247, 247);
     --body-font: 'Rubik', sans-serif;
     --big-font-size: 1.5rem;
     --h2-font-size: 1.25rem;
@@ -34,18 +34,10 @@
 
 :root:has(.dark-mode-toggle i.active) {
     --first-background-color: rgb(24, 24, 24);
-    --second-background-color: rgb(28, 28, 28);
-    --first-color: #82a3fe;
-    --second-color: #1f51dd;
+    --second-background-color: rgb(30, 30, 30);
+    --first-color: rgb(118, 149, 236);
+    --second-color: rgb(40, 97, 255);
     --box-shadow-color: rgba(255, 255, 255, 0.2);
-}
-
-:root:has(.dark-mode-toggle i.active) img:not([src*='.svg']) {
-    filter: grayscale(50%);
-}
-
-:root:has(.dark-mode-toggle i.active) .timeline-component--bg {
-    background: var(--second-background-color);
 }
 
 *,
@@ -67,6 +59,7 @@ body {
     height: 100vh;
     margin: var(--header-height) 0 0 0;
     font-family: var(--body-font);
+    font-display: swap;
     font-size: var(--normal-font-size);
     color: var(--second-color);
 }
@@ -112,7 +105,8 @@ button:not(.invisible) {
     box-shadow: rgba(27, 31, 35, 0.04) 0 2px 0, rgba(255, 255, 255, 0.25) 0 2px 0 inset;
     box-sizing: border-box;
     color: #24292E;
-    font-family: 'Rubik', sans-serif;
+    font-family: inherit;
+    font-display: swap;
     font-size: clamp(var(--mb-1), var(--mb-2), var(--mb-3));
     font-weight: 500;
     line-height: 20px;
@@ -475,6 +469,8 @@ img {
     padding: 0.5em;
     box-shadow: 0 0 10px var(--box-shadow-color);
     border-radius: 10px;
+    background: var(--second-background-color);
+
 }
 
 .timeline-middle {
@@ -528,9 +524,9 @@ img {
     position: relative;
     display: flex;
     justify-content: space-between;
-    background-color: var(--second-background-color);
+    background: var(--second-background-color);
     color: var(--first-color);
-    box-shadow: 0 4px 12px var(--box-shadow-color);
+    box-shadow: 0 4px 20px var(--box-shadow-color);
     font-size: 2vh;
     text-align: center;
     font-weight: 700;
