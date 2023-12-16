@@ -1,0 +1,135 @@
+:root {
+    --navbar-width: 64px;
+    --navbar-color: grey;
+    --navbar-border-color: rgb(55, 55, 55);
+}
+
+body {
+    overflow: hidden;
+}
+
+.content {
+    position: fixed;
+    top: 69px;
+    left: 69px;
+    width: calc(100vw - ((64px + 5px) * 2));
+    height: calc(100vh - ((64px + 5px) * 2));
+
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+canvas {
+    position: fixed;
+    top: 69px;
+    left: 69px;
+}
+
+nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--navbar-color);
+    border: 5px solid var(--navbar-border-color);
+    margin: 0;
+    z-index: 10;
+}
+
+.topbar,
+.bottombar {
+    height: var(--navbar-width);
+    width: 100vw;
+    z-index: 1;
+}
+
+.bottombar {
+    top: calc(100vh - var(--navbar-width) - 10px);
+    
+}
+
+.leftbar,
+.rightbar {
+    width: var(--navbar-width);
+    height: calc(100vh - 10px);
+}
+
+.rightbar {
+    left: calc(100vw - var(--navbar-width) - 10px)
+}
+
+.rightbar::before {
+    background-color: var(--navbar-color);
+    position: absolute;
+    content: "";
+    display: block;
+    height: var(--navbar-width);
+    width: var(--navbar-width);
+    left: -5px;
+}
+
+.leftbar::before {
+    background-color: var(--navbar-color);
+    position: absolute;
+    content: "";
+    display: block;
+    height: var(--navbar-width);
+    width: var(--navbar-width);
+    left: 5px;
+}
+
+.rightbar::after {
+    background-color: var(--navbar-color);
+    position: absolute;
+    top: calc(100vh - var(--navbar-width) - 10px);
+    content: "";
+    display: block;
+    height: var(--navbar-width);
+    width: var(--navbar-width);
+    left: -5px;
+}
+
+.leftbar::after {
+    background-color: var(--navbar-color);
+    position: absolute;
+    top: calc(100vh - var(--navbar-width) - 10px);
+    content: "";
+    display: block;
+    height: var(--navbar-width);
+    width: var(--navbar-width);
+    left: 5px;
+}
+
+.scrollbar {
+    --height: 70vh;
+    position: absolute;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    left: calc(var(--navbar-width) - 56px);
+    top: calc(var(--navbar-width) + ((100vh - 10px - (var(--navbar-width) * 2) - var(--height)) / 2));
+    height: var(--height);
+    width: 50px;
+    z-index: 99;
+}
+
+.scrollbar div {
+    height: 200vh;
+    display: block;
+}
+
+.scrollbar::-webkit-scrollbar {
+    width: 50px;
+}
+
+.scrollbar::-webkit-scrollbar-track {
+    background: #a4a4a4;
+    border-radius: 10px;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+    background: var(--navbar-border-color);
+    border-radius: 10px;
+}
+
+.scrollbar::-webkit-scrollbar-thumb:hover {
+    background: rgb(40, 40, 40);
+}
