@@ -11,26 +11,339 @@
 
     <body>
         <div class="gui">
-            <div class="diagonals"></div>
-            <div class="diagonals"></div>
-            <div class="diagonals"></div>
-            <div class="diagonals"></div>
+            <div class="diagonals diagonal-1"></div>
+            <div class="diagonals diagonal-2"></div>
+            <div class="diagonals diagonal-3"></div>
+            <div class="diagonals diagonal-4"></div>
             <nav class="topbar">
+                <div class="logo-container">
+                    <svg class="logo" version="1.0" xmlns="http://www.w3.org/2000/svg" width="256.000000pt"
+                        height="256.000000pt" viewBox="0 0 256.000000 256.000000" preserveAspectRatio="xMidYMid meet">
+                        <g transform="translate(0.000000,256.000000) scale(0.100000,-0.100000)" fill="#00bcf0"
+                            stroke="none">
+                            <path d="M1184 2332 c-28 -10 -63 -25 -76 -34 -63 -42 -697 -604 -726 -645
+                                    -62 -88 -63 -94 -60 -674 l3 -524 24 -52 c28 -62 103 -136 169 -166 47 -22 48
+                                    -22 762 -22 714 0 715 0 762 22 66 30 141 104 169 166 l24 52 3 524 c3 573 2
+                                    583 -55 668 -43 64 -707 640 -772 671 -71 33 -159 39 -227 14z m162 -224 c16
+                                    -13 171 -147 345 -299 233 -204 319 -286 328 -310 18 -51 15 -959 -3 -1003
+                                    -24 -58 -46 -66 -182 -66 l-122 0 -4 303 c-3 285 -4 305 -25 349 -30 66 -104
+                                    141 -166 169 -49 22 -64 24 -237 24 -173 0 -188 -2 -237 -24 -62 -28 -136
+                                    -103 -166 -169 -21 -44 -22 -64 -25 -349 l-4 -303 -122 0 c-136 0 -158 8 -182
+                                    66 -18 44 -21 952 -3 1003 9 24 95 106 328 310 385 337 365 321 411 321 23 0
+                                    48 -8 66 -22z m78 -1052 c66 -27 66 -30 66 -343 l0 -283 -210 0 -210 0 0 283
+                                    c0 312 1 315 64 343 43 18 245 19 290 0z" />
+                        </g>
+                    </svg>
+                    <h1 class="logo-title no-touch">My Portfolio</h1>
+                </div>
             </nav>
             <nav class="leftbar"></nav>
             <nav class="rightbar">
-                <div class="scrollbar"><div></div></div>
+                <div class="scrollbar">
+                    <div></div>
+                </div>
             </nav>
             <nav class="bottombar">
-                <div class="navindicator">Home</div>
-                <div class="navindicator">About</div>
-                <div class="navindicator">Code</div>
-                <div class="navindicator">Origami</div>
+                <div class="indicators">
+                    <div class="navindicator home no-touch">Home</div>
+                    <div class="navindicator about no-touch">About</div>
+                    <div class="navindicator code no-touch">Code</div>
+                    <div class="navindicator origami no-touch">Origami</div>
+                </div>
             </nav>
             <div class="screen">
                 <canvas class="bg"></canvas>
                 <div class="content">
+                    <div class='home section'>
+                        <div class='home-data'>
+                            <h1 class='home-title no-select hidden hidden-left' style='--animation-delay: 300ms'>Hi,
+                                I'm <span class='first-color'>Manishankar Dhingra,</span><br> And I'm
+                                a Fullstack Developer!</h1>
+                        </div>
+                    </div>
 
+                    <div class='about section'>
+                        <h2 class='section-title hidden hidden-right' style='--animation-delay: 250ms'>About</h2>
+                        <div class='about-container hidden hidden-right' style='--animation-delay: 250ms'>
+                            <div>
+                                <h2 class='subtitle'>I'm Manishankar Dhingra!</h2>
+                                <p class='about-text'>I've been a programmer since I made Java mods for my then
+                                    favourite video game, Minecraft, when I was 10. I started with modding video games,
+                                    then tried to make my own unity games. I occasionally make python scripts and bots
+                                    and then moved to web development, where I made my first portfolio site, and now
+                                    this one. I've also been a lifelong fan of origami, the only type of art I'm good at
+                                    lol. </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class='projects section'>
+                        <h2 class='section-title hidden hidden-left' style='--animation-delay: 250ms'>Coding Projects
+                        </h2>
+                        <div class='projects-container bd-grid'>
+                            <div class='timeline'>
+                                <div class='timeline-component'>
+                                    <div class='timeline-date timeline-date--right'>August 21, 2021</div>
+                                </div>
+                                <div class='timeline-middle'>
+                                    <div class='timeline-point'></div>
+                                </div>
+                                <div class='timeline-component timeline-component--bg hidden hidden-right'
+                                    style='--animation-delay: 400ms'>
+                                    <h2 class='timeline-title'>First Coding Project: Ruby Items</h2>
+                                    <p class='timeline-paragraph'>
+                                        <br> My first ever coding project was a minecraft mod, I made it several years
+                                        ago but
+                                        decided to upload it to github in 2021.
+                                        <br> <a target='_blank' class='link'
+                                            href='https://github.com/Mani-cwaf/Ruby-Items-1.16.1-1.0.0'><button><span
+                                                    class='link'><b>Github</b></span></button></a>
+                                        <a target='_blank' class='link'
+                                            href='https://www.curseforge.com/minecraft/mc-mods/ruby-items'><button><span
+                                                    class='link'><b>CurseForge</b></span></button></a>
+                                    </p>
+                                </div>
+
+
+                                <div class='timeline-component timeline-component--bg hidden hidden-left'
+                                    style='--animation-delay: 400ms'>
+                                    <h2 class='timeline-title'>BTD6 Mods</h2>
+                                    <p class='timeline-paragraph'>
+                                        <br> I created mods for a game called BTD6 in C#.
+                                        <br><br> Dark Mage: My first tower mod, it's similar to the wizard monkey, but
+                                        has more
+                                        powerful upgrades and a paragon. <br> <a class='link' target='_blank'
+                                            href='https://github.com/Mani-cwaf/DarkMage'><button><span
+                                                    class='link'><b>Github</b></span></button></a> <a class='link'
+                                            href='https://github.com/Mani-cwaf/DarkMage/raw/main/DarkMage/DarkMage.dll'><button><span
+                                                    class='link'><b>Download</b></span></button></a>
+
+                                        <br><br> Vanilla Paragons: A mod where I show my take on what the paragons
+                                        should be for
+                                        every vanilla tower. <br> <a class='link' target='_blank'
+                                            href='https://github.com/Mani-cwaf/VanillaParagons'><button><span
+                                                    class='link'><b>Github</b></span></button></a> <a class='link'
+                                            href='https://github.com/Mani-cwaf/VanillaParagons/raw/main/VanillaParagons/VanillaParagons.dll'><button><span
+                                                    class='link'><b>Download</b></span></button></a>
+
+                                        <br><br> Fun Pack Of Fun Experiments: A collection of fun towers in a pack, all
+                                        of them
+                                        toggleable.
+                                        <br> <a class='link' target='_blank'
+                                            href='https://github.com/Mani-cwaf/FunPackOfFunExperiments'><button><span
+                                                    class='link'><b>Github</b></span></button></a> <a class='link'
+                                            href='https://github.com/Mani-cwaf/FunPackOfFunExperiments/blob/main/FunPackOfFunExperiments/FunPackOfFunExperiments.dll'><button><span
+                                                    class='link'><b>Download</b></span></button></a>
+
+                                        <br><br> OP Towers: Basically just memes, like a dart monkey that does trillions
+                                        of
+                                        damage.
+                                        <br> <a class='link' target='_blank'
+                                            href='https://github.com/Mani-cwaf/OPTowers'><button><span
+                                                    class='link'><b>Github</b></span></button></a> <a class='link'
+                                            href='https://github.com/Mani-cwaf/OPTowers/blob/main/OPTowers/OPTowers.dll'><button><span
+                                                    class='link'><b>Download</b></span></button></a>
+
+                                        <br><br> Bloon Chipper: One of the hardest towers to code I've made, the bloon
+                                        chipper
+                                        from BTD5.
+                                        <br> <a class='link' target='_blank'
+                                            href='https://github.com/Mani-cwaf/BloonChipper'><button><span
+                                                    class='link'><b>Github</b></span></button></a> <a class='link'
+                                            href='https://github.com/Mani-cwaf/BloonChipper/blob/main/BloonChipper/BloonChipper.dll'><button><span
+                                                    class='link'><b>Download</b></span></button></a>
+
+                                        <br><br> Stat Multiplier: Allows you to modify every tower stat in the game.
+                                        <br> <a class='link' target='_blank'
+                                            href='https://github.com/Mani-cwaf/StatMultiplier'><button><span
+                                                    class='link'><b>Github</b></span></button></a> <a class='link'
+                                            href='https://github.com/Mani-cwaf/BloonChipper/blob/main/BloonChipper/BloonChipper.dll'><button><span
+                                                    class='link'><b>Download</b></span></button></a>
+                                    </p>
+                                </div>
+                                <div class='timeline-middle'>
+                                    <div class='timeline-point'></div>
+                                </div>
+                                <div class='timeline-component'>
+                                    <div class='timeline-date timeline-date--left'>July 17, 2022</div>
+                                </div>
+
+
+                                <div class='timeline-component'>
+                                    <div class='timeline-date timeline-date--right'>August 9, 2022</div>
+                                </div>
+                                <div class='timeline-middle'>
+                                    <div class='timeline-point'></div>
+                                </div>
+                                <div class='timeline-component timeline-component--bg hidden hidden-right'
+                                    style='--animation-delay: 400ms'>
+                                    <h2 class='timeline-title'>First Unity Game: Sustainable Cities</h2>
+                                    <p class='timeline-paragraph'>
+                                        <br> A simple city builder game revolving around the topic of sustainable cities
+                                        for a
+                                        school
+                                        project.
+                                        <br><br> Web: <a target='_blank' class='link'
+                                            href='https://mani-dev101.itch.io/sustainable-cities'><button><span
+                                                    class='link'><b>Play</b></span></button></a>
+                                        <br><br> Windows: <a class='link'
+                                            href='https://github.com/Mani-cwaf/SustainableCitiesProject/releases/latest/download/SustainableCitiesProject-Windows.zip'><button><span
+                                                    class='link'><b>Download</b></span></button></a>
+                                        <br><br> Linux: <a class='link'
+                                            href='https://github.com/Mani-cwaf/SustainableCitiesProject/releases/latest/download/SustainableCitiesProject-Linux.zip'><button><span
+                                                    class='link'><b>Download</b></span></button></a>
+                                    </p>
+                                </div>
+
+
+                                <div class='timeline-component timeline-component--bg hidden hidden-left'
+                                    style='--animation-delay: 400ms'>
+                                    <h2 class='timeline-title'>Second Unity Game: Horror Maze</h2>
+                                    <p class='timeline-paragraph'>
+                                        <br> The best horror game ever, trust me.
+                                        <br><br> Web: <a target='_blank' class='link'
+                                            href='https://mani-dev101.itch.io/horror-maze'><button><span
+                                                    class='link'><b>Play</b></span></button></a>
+                                        <br><br> Windows: <a class='link'
+                                            href='https://github.com/Mani-cwaf/HorrorMazeProject/releases/latest/download/HorrorMazeProject-Windows.zip'><button><span
+                                                    class='link'><b>Download</b></span></button></a>
+                                        <br><br> Linux: <a class='link'
+                                            href='https://github.com/Mani-cwaf/HorrorMazeProject/releases/latest/download/HorrorMazeProject-Linux.zip'><button><span
+                                                    class='link'><b>Download</b></span></button></a>
+                                    </p>
+                                </div>
+                                <div class='timeline-middle'>
+                                    <div class='timeline-point'></div>
+                                </div>
+                                <div class='timeline-component'>
+                                    <div class='timeline-date--left'>September 16, 2022</div>
+                                </div>
+
+
+                                <div class='timeline-component'>
+                                    <div class='timeline-date timeline-date--right'>October 31, 2022</div>
+                                </div>
+                                <div class='timeline-middle'>
+                                    <div class='timeline-point'></div>
+                                </div>
+                                <div class='timeline-component timeline-component--bg hidden hidden-right'
+                                    style='--animation-delay: 400ms'>
+                                    <h2 class='timeline-title'>Poll Bot</h2>
+                                    <p class='timeline-paragraph'>
+                                        A simple discord bot that allows you to create polls, and logs results after a
+                                        given
+                                        time period [WIP]
+                                        <br><br> Source code: <a target='_blank' class='link'
+                                            href='https://github.com/Mani-cwaf/DiscordPollBot'><button><span
+                                                    class='link'><b>Github</b></span></button></a>
+                                        <br><br> Invite bot to your server: <a target='_blank' class='link'
+                                            href='https://discord.com/api/oauth2/authorize?client_id=992445952533209198&permissions=8&scope=bot'><button><span
+                                                    class='link'><b>Link</b></span></button></a>
+                                    </p>
+                                </div>
+
+
+                                <div class='timeline-component timeline-component--bg hidden hidden-left'
+                                    style='--animation-delay: 400ms'>
+                                    <h2 class='timeline-title'>Made This Website</h2>
+                                    <p class='timeline-paragraph'>
+                                        <br> And published it here on <a target='_blank' class='link'
+                                            href='https://github.com/Mani-cwaf/Portfolio'><button><span
+                                                    class='link'><b>Github</b></span></button></a>
+                                    </p>
+                                </div>
+                                <div class='timeline-middle'>
+                                    <div class='timeline-point'></div>
+                                </div>
+                                <div class='timeline-component'>
+                                    <div class='timeline-date timeline-date--left'>November 4, 2022</div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class='origami section'>
+                        <h2 class='section-title hidden hidden-left' style='--animation-delay: 250ms'> Origami
+                        </h2>
+                        <div class='origami-container'>
+                            <div class='display'>
+                                <div class="display-component--bg intro hidden hidden-left"
+                                    style='--animation-delay: 400ms'>
+                                    <p>
+                                        Origami is the art of paper folding. There are 2 rules: A single sheet of uncut
+                                        paper (usually square) and no Cutting or Glueing while making the model. Models
+                                        can get very advanced, as you are supposed to make intricate details from a
+                                        square of paper by just folding. I got the hand of it though, and recently went
+                                        up a notch to the extreme difficulty models, here are some I made. (I like
+                                        presentation so I put a small amount of glue in some spots after doing all the
+                                        folds, but the model holds together by itself)
+                                    </p>
+                                </div>
+                                <div class='display-component'>
+                                    <div class='display-date'>December 3, 2023</div>
+                                </div>
+                                <div class='display-component display-component--bg hidden hidden-left'
+                                    style='--animation-delay: 400ms'>
+                                    <h2 class='display-title'>Christmas Tree</h2>
+                                    <div class="display-content">
+                                        <p class='display-paragraph'>
+                                            Designed by Jo Nakashima, this was a relatively straitforward model, but the
+                                            steps were repetitive and the paper was very large, so it took some time to
+                                            treat and fold.
+                                            <br><br>Time Taken Folding: 4 Hours
+                                            <br><br>Paper Used: 50x50cm green and brown double tissue paper treated with
+                                            carboxymethylcellulose, 15x15 yellow origami paper cut into quarters and
+                                            arranged into a strip.
+                                        </p>
+                                        <img src="" alt="" class="display-img">
+                                    </div>
+                                </div>
+
+
+                                <div class='display-component'>
+                                    <div class='display-date'>October 13, 2023</div>
+                                </div>
+                                <div class='display-component display-component--bg hidden hidden-left'
+                                    style='--animation-delay: 400ms'>
+                                    <h2 class='display-title'>Phoenix</h2>
+                                    <div class="display-content">
+                                        <p class='display-paragraph'>
+                                            Designed by Satoshi Kamiya, This was the most difficult model I've made so
+                                            far. It took a huge and thin sheet with many precreases in the creasepattern
+                                            and a lot of repetitive and difficult folds.
+                                            <br><br>Time Taken Folding: 15 Hours
+                                            <br><br>Paper Used: 60x60cm double side yellow single tissue paper treated
+                                            with double layers of carboxymethylcellulose.
+                                        </p>
+                                        <img src="" alt="" class="display-img">
+                                    </div>
+                                </div>
+
+
+                                <div class='display-component'>
+                                    <div class='display-date display-date--right'>December 16, 2023</div>
+                                </div>
+                                <div class='display-component display-component--bg hidden hidden-left'
+                                    style='--animation-delay: 400ms'>
+                                    <h2 class='display-title'>Grim Reaper</h2>
+                                    <div class="display-content">
+                                        <p class='display-paragraph'>
+                                            Designed by Miyamoto Chuya, This was a finicky and complex model. It was
+                                            more interesting than the phoenix and somewhat easier, but time consuming
+                                            and difficult nonetheless.
+                                            <br><br>Time Taken Folding: 10 Hours
+                                            <br><br>Paper Used: 48x48cm one side black single tissue paper treated with
+                                            double layers of carboxymethylcellulose.
+                                        </p>
+                                        <img src="" alt="" class="display-img">
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

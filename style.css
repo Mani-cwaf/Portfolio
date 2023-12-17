@@ -1,11 +1,129 @@
+/* Add fonts from google */
+@font-face {
+    font-family: 'Kanit';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/kanit/v15/nKKZ-Go6G5tXcrabGwCYdA.woff2) format('woff2');
+    unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+    font-family: 'Kanit';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/kanit/v15/nKKZ-Go6G5tXcraVGwA.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/rubik/v28/iJWZBXyIfDnIV5PNhY1KTN7Z-Yh-4I-FWUU1Z4Y.woff2) format('woff2');
+    unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/rubik/v28/iJWZBXyIfDnIV5PNhY1KTN7Z-Yh-4I-FV0U1.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* Set global variables */
 :root {
     --navbar-width: 64px;
-    --navbar-color: grey;
-    --navbar-border-color: rgb(55, 55, 55);
+    --color: grey;
+    --border-color: rgb(55, 55, 55);
+    --contrast-color: rgb(0, 188, 240);
 }
+
+/* Additional attributes for elements */
+.hidden {
+    opacity: 0;
+    filter: blur(10px);
+    transition: all var(--animation-delay) ease-out;
+}
+
+.hidden-left {
+    transform: translate(-20vw, 15vh);
+}
+
+.hidden-right {
+    transform: translate(20vw, 15vh);
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translate(0, 0);
+}
+
+.no-touch,
+span.link {
+    pointer-events: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+button {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid var(--border-color);
+    border-radius: 6px;
+    box-shadow: rgba(27, 31, 35, 0.04) 0 2px 0, rgba(255, 255, 255, 0.25) 0 2px 0 inset;
+    box-sizing: border-box;
+    color: var(--contrast-color);
+    font-family: inherit;
+    font-display: swap;
+    font-weight: 500;
+    line-height: 20px;
+    list-style: none;
+    padding: 3px 8px;
+    position: relative;
+    transition: first-background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+    user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+button:hover {
+    background-color: rgba(255, 255, 255, .2);
+    text-decoration: none;
+    transition-duration: 0.1s;
+    outline: 1px transparent;
+    transform: translateY(-1.25px);
+}
+
+
+/* Basic layout */
 
 body {
     overflow: hidden;
+    font-family: 'Kanit', sans-serif;
+    color: var(--contrast-color);
+}
+
+.section {
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 2rem;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px 7px rgba(255, 255, 255, 0.5);
+}
+
+.section-title {
+    text-align: center;
+    font-size: xx-large;
 }
 
 .content {
@@ -14,9 +132,37 @@ body {
     left: 69px;
     width: calc(100vw - ((64px + 5px) * 2));
     height: calc(100vh - ((64px + 5px) * 2));
-
+    overflow-y: visible;
+    overflow-x: hidden;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.content::-webkit-scrollbar {
+    width: 0;
+}
+
+.home {
+    font-family: 'Rubik', sans-serif;
+    grid-column: 2/span 6;
+    margin-top: 5rem;
+    margin-bottom: 35rem;
+}
+
+.about {
+    grid-column: 5/ span 7;
+    margin-bottom: 35rem;
+}
+
+.projects {
+    grid-column: 2/span 9;
+    margin-bottom: 35rem;
+}
+
+.origami {
+    grid-column: 3/span 9;
+    margin-bottom: 5rem;
 }
 
 canvas {
@@ -29,11 +175,13 @@ nav {
     position: absolute;
     top: 0;
     left: 0;
-    background-color: var(--navbar-color);
-    border: 5px solid var(--navbar-border-color);
+    background-color: var(--color);
+    border: 5px solid var(--border-color);
     margin: 0;
     z-index: 10;
 }
+
+/* Design GUI */
 
 .topbar,
 .bottombar {
@@ -44,7 +192,6 @@ nav {
 
 .bottombar {
     top: calc(100vh - var(--navbar-width) - 10px);
-    
 }
 
 .leftbar,
@@ -58,7 +205,7 @@ nav {
 }
 
 .rightbar::before {
-    background-color: var(--navbar-color);
+    background-color: var(--color);
     position: absolute;
     content: "";
     display: block;
@@ -68,7 +215,7 @@ nav {
 }
 
 .leftbar::before {
-    background-color: var(--navbar-color);
+    background-color: var(--color);
     position: absolute;
     content: "";
     display: block;
@@ -78,7 +225,7 @@ nav {
 }
 
 .rightbar::after {
-    background-color: var(--navbar-color);
+    background-color: var(--color);
     position: absolute;
     top: calc(100vh - var(--navbar-width) - 10px);
     content: "";
@@ -88,8 +235,60 @@ nav {
     left: -5px;
 }
 
+.diagonals {
+    position: absolute;
+    border-top: 5px solid var(--border-color);
+    width: 95px;
+    z-index: 99;
+}
+
+.diagonal-1 {
+    transform: rotate(45deg);
+    transform-origin: 5px -5px;
+}
+
+.diagonal-2 {
+    transform: rotate(135deg);
+    transform-origin: 5px 0px;
+    left: calc(100vw - 10px);
+}
+
+.diagonal-3 {
+    transform: rotate(-45deg);
+    transform-origin: 2px 6px;
+    top: calc(100vh - 10px);
+}
+
+.diagonal-4 {
+    transform: rotate(-135deg);
+    transform-origin: 3px 3px;
+    top: calc(100vh - 10px);
+    left: calc(100vw - 10px);
+}
+
+/* Design top bar */
+
+.logo-container {
+    display: flex;
+    margin: 0.5rem 0 0 5rem;
+}
+
+.logo {
+    width: 42px;
+    height: 42px;
+    margin-right: 0.5rem;
+    z-index: 99;
+}
+
+.logo-title {
+    font-size: xx-large;
+    margin: 0;
+}
+
+/* Design scrollbar */
+
 .leftbar::after {
-    background-color: var(--navbar-color);
+    background-color: var(--color);
     position: absolute;
     top: calc(100vh - var(--navbar-width) - 10px);
     content: "";
@@ -126,10 +325,155 @@ nav {
 }
 
 .scrollbar::-webkit-scrollbar-thumb {
-    background: var(--navbar-border-color);
+    background: var(--border-color);
     border-radius: 10px;
 }
 
 .scrollbar::-webkit-scrollbar-thumb:hover {
-    background: rgb(40, 40, 40);
+    background: rgb(60, 60, 60);
+}
+
+.scrollbar::-webkit-scrollbar-thumb:active {
+    background: var(--contrast-color);
+}
+
+/* Design bottom indicators */
+
+.indicators {
+    display: flex;
+    padding: 1rem 5rem 1rem 5rem;
+    margin: auto;
+    width: min-content;
+    justify-content: center;
+    color: black;
+    font-family: 'Rubik';
+}
+
+.navindicator {
+    position: relative;
+    margin: 0 5vw 0 5vw;
+    padding: 0.5rem;
+    font-size: larger;
+    font-weight: bold;
+    text-align: center;
+    background: linear-gradient(rgb(60, 60, 60), rgb(85, 85, 85));
+    box-shadow: 1px 1px 3px 4px rgba(255, 255, 255, .2);
+    filter: blur(0.75px);
+    width: 5rem;
+}
+
+/* activate indicators based on what is on screen */
+
+body:has(.home.section.active) .navindicator.home {
+    color: var(--contrast-color);
+}
+
+body:has(.about.section.active) .navindicator.about {
+    color: var(--contrast-color);
+}
+
+body:has(.projects.section.active) .navindicator.code {
+    color: var(--contrast-color);
+}
+
+body:has(.origami.section.active) .navindicator.origami {
+    color: var(--contrast-color);
+}
+
+/* Design grid for timeline */
+
+.timeline {
+    margin-bottom: 10vh;
+    max-width: 1024px;
+    display: grid;
+    grid-template-columns: 1fr 3px 1fr;
+}
+
+.timeline-component {
+    margin: 0 1rem 1rem 1rem;
+}
+
+.timeline-component--bg {
+    padding: 0.5em;
+    box-shadow: 1px 1px 5px 5px rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    background: rgba(55, 55, 55, 0.5);
+}
+
+.timeline-middle {
+    position: relative;
+    background: var(--border-color);
+}
+
+.timeline-point {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 15px;
+    height: 15px;
+    background: var(--border-color);
+    border-radius: 50%
+}
+
+.timeline-point--bottom {
+    top: initial;
+    bottom: 0;
+}
+
+.timeline-date--right {
+    text-align: right;
+}
+
+.timeline-title {
+    margin: 0;
+    font-size: 1.15em;
+    font-weight: bold;
+}
+
+.display-component {
+    margin: 0 1rem 1rem 1rem;
+}
+
+.display-component--bg {
+    padding: 0.5em;
+    box-shadow: 1px 1px 5px 5px rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    background: rgba(55, 55, 55, 0.5);
+}
+
+.display-date {
+    text-align: right;
+}
+
+.display-title {
+    margin: 0;
+    font-size: 1.15em;
+    font-weight: bold;
+}
+
+.display-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.display-paragraph,
+.display-img {
+    box-shadow: 1px 1px 5px 5px rgba(255, 255, 255, 0.5);
+    margin: 0.5rem;
+}
+
+.display-paragraph {
+    grid-column: 1/span 1;
+    padding: 0.5rem;
+    height: 25rem;
+}
+
+.display-img {
+    grid-column: 2/span 1;
+    height: 26rem;
+}
+
+.intro {
+    margin-bottom: 3rem;
 }

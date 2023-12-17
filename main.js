@@ -2,7 +2,31 @@ import './style.css'
 
 import * as THREE from 'three'
 
+const showobserver = new IntersectionObserver((e => {
+    e.forEach((e => {
+        e.isIntersecting ? e.target.classList.add("show") : e.target.classList.remove("show")
+    }))
+}));
+document.querySelectorAll(".hidden").forEach((e => showobserver.observe(e)));
+
+const activeobserver = new IntersectionObserver((e => {
+    e.forEach((e => {
+        e.isIntersecting ? e.target.classList.add("active") : e.target.classList.remove("active")
+    }))
+}));
+document.querySelectorAll(".section").forEach((e => activeobserver.observe(e)));
+
 const scrollbar = document.querySelector(".scrollbar");
+
+const content = document.querySelector('.content');
+content.addEventListener('wheel', preventScroll, { passive: false });
+
+function preventScroll(e) {
+    e.preventDefault();
+    e.stopPropagation();
+
+    return false;
+}
 
 const scene = new THREE.Scene();
 
@@ -17,33 +41,28 @@ renderer.setSize(window.innerWidth - ((64 + 5) * 2), window.innerHeight - ((64 +
 
 camera.position.setZ(30);
 
-const geometry = new THREE.TorusGeometry(10, 3, 16, 100);
-const material = new THREE.MeshBasicMaterial({ color: 0xFF6347 });
-const torus = new THREE.Mesh(geometry, material);
-
-const gridHelper = new THREE.GridHelper(200, 50);
-
-
+const stargeometry = new THREE.SphereGeometry(0.25, 24, 24);
+const starmaterial = new THREE.MeshBasicMaterial({ color: 0xffffff });
 function addStar() {
-    const geometry = new THREE.SphereGeometry(THREE.MathUtils.randFloat(0.15, 0.25), 24, 24);
-    const material = new THREE.MeshBasicMaterial({ color: 0xffffff });
-    const star = new THREE.Mesh(geometry, material);
+    const star = new THREE.Mesh(stargeometry, starmaterial);
 
-    const [x, y, z] = Array(3).fill().map(() => THREE.MathUtils.randFloatSpread(100));
+    const [x, y, z] = Array(3).fill().map(() => THREE.MathUtils.randFloatSpread(90));
 
-    star.position.set(x,y,z);
+    star.position.set(x, y, z);
     scene.add(star);
 };
 
-Array(300).fill().forEach(addStar);
+Array(200).fill().forEach(addStar);
 
 function animate() {
     requestAnimationFrame(animate);
 
-    var factor = scrollbar.scrollTop / 893.1839599609375;
-    scene.rotation.x = 10 * factor;
-    scene.rotation.y = 25 * factor;
-    scene.rotation.z = 5 * factor;
+    var factor = scrollbar.scrollTop / (scrollbar.scrollHeight - scrollbar.clientHeight);
+    scene.rotation.x = 5 * factor;
+    scene.rotation.y = 13 * factor;
+    scene.rotation.z = 2 * factor;
+
+    content.scroll(0, (content.scrollHeight - content.clientHeight) * factor, "smooth");
 
     renderer.render(scene, camera);
 };
