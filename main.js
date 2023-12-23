@@ -9,6 +9,7 @@ const showobserver = new IntersectionObserver((e => {
 }));
 document.querySelectorAll(".hidden").forEach((e => showobserver.observe(e)));
 
+
 const activeobserver = new IntersectionObserver((e => {
     e.forEach((e => {
         e.isIntersecting ? e.target.classList.add("active") : e.target.classList.remove("active")
@@ -38,37 +39,37 @@ const starmaterial = new THREE.MeshBasicMaterial({ color: 0xffffff });
 function addStar() {
     const star = new THREE.Mesh(stargeometry, starmaterial);
 
-    const [x, y, z] = Array(3).fill().map(() => THREE.MathUtils.randFloatSpread(90));
+    const [x, y, z] = Array(3).fill().map(() => THREE.MathUtils.randFloatSpread(85));
 
     star.position.set(x, y, z);
     scene.add(star);
 };
 
-Array(200).fill().forEach(addStar);
+Array(250).fill().forEach(addStar);
 
-function animate(){};
+function animate() { };
 if (window.innerWidth > 900) {
     animate = () => {
         requestAnimationFrame(animate);
-    
+
         var factor = scrollbar.scrollTop / (scrollbar.scrollHeight - scrollbar.clientHeight);
         scene.rotation.x = 5 * factor;
         scene.rotation.y = 13 * factor;
         scene.rotation.z = 2 * factor;
-    
+
         content.scroll(0, (content.scrollHeight - content.clientHeight) * factor, "smooth");
-    
+
         renderer.render(scene, camera);
     };
 } else {
     animate = () => {
         requestAnimationFrame(animate);
-    
+
         var factor = content.scrollTop / (content.scrollHeight - content.clientHeight);
         scene.rotation.x = 5 * factor;
         scene.rotation.y = 13 * factor;
         scene.rotation.z = 2 * factor;
-        
+
         renderer.render(scene, camera);
     };
 }
