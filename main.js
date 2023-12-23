@@ -2,6 +2,7 @@ import './style.css'
 
 import * as THREE from 'three'
 
+
 const showobserver = new IntersectionObserver((e => {
     e.forEach((e => {
         e.isIntersecting ? e.target.classList.add("show") : e.target.classList.remove("show")
@@ -16,6 +17,7 @@ const activeobserver = new IntersectionObserver((e => {
     }))
 }));
 document.querySelectorAll(".section").forEach((e => activeobserver.observe(e)));
+
 
 const scrollbar = document.querySelector(".scrollbar");
 
@@ -36,16 +38,20 @@ camera.position.setZ(30);
 
 const stargeometry = new THREE.SphereGeometry(0.25, 24, 24);
 const starmaterial = new THREE.MeshBasicMaterial({ color: 0xffffff });
-function addStar() {
-    const star = new THREE.Mesh(stargeometry, starmaterial);
-
-    const [x, y, z] = Array(3).fill().map(() => THREE.MathUtils.randFloatSpread(85));
-
-    star.position.set(x, y, z);
-    scene.add(star);
+function addStars() {
+    for (let i = 0; i < 200; i++) {
+        const star = new THREE.Mesh(stargeometry, starmaterial);
+    
+        star.position.set(...Array(3).fill().map(() => THREE.MathUtils.randFloatSpread(85)));
+        scene.add(star);
+    }
 };
 
-Array(250).fill().forEach(addStar);
+window.onload = () => {
+    setTimeout(() => {
+        addStars();
+    }, 500);
+}
 
 function animate() { };
 if (window.innerWidth > 900) {

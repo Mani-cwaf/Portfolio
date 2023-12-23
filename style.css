@@ -341,7 +341,7 @@ body:has(.origami.section.active) .navindicator.origami {
 
 .timeline-middle {
     position: relative;
-    background: rgb(55, 55, 55);
+    background: var(--contrast-color);
 }
 
 .timeline-point {
@@ -351,7 +351,7 @@ body:has(.origami.section.active) .navindicator.origami {
     transform: translateX(-50%);
     width: 15px;
     height: 15px;
-    background: rgb(55, 55, 55);
+    background: var(--contrast-color);
     border-radius: 50%
 }
 
@@ -415,6 +415,7 @@ body:has(.origami.section.active) .navindicator.origami {
     margin-bottom: 3rem;
 }
 
+/* content for wide screens */
 @media only screen and (min-width: 901px) {
     /* Design scrollbar */
 
@@ -484,15 +485,15 @@ body:has(.origami.section.active) .navindicator.origami {
     .home {
         grid-column: 2/span 6;
     }
-    
+
     .about {
         grid-column: 5/ span 7;
     }
-    
+
     .projects {
         grid-column: 2/span 9;
     }
-    
+
     .origami {
         grid-column: 3/span 9;
     }
@@ -504,6 +505,7 @@ body:has(.origami.section.active) .navindicator.origami {
     }
 }
 
+/* content for thin screens */
 @media only screen and (max-width: 900px) {
     .display-img {
         object-fit: cover;
@@ -532,23 +534,23 @@ body:has(.origami.section.active) .navindicator.origami {
         grid-template-columns: repeat(12, 1fr);
         background: rgba(255, 255, 255, 0.1);
     }
-    
+
     .content::-webkit-scrollbar {
         width: 0;
     }
-    
+
     .home {
         grid-column: 2/span 9;
     }
-    
+
     .about {
         grid-column: 3/ span 10;
     }
-    
+
     .projects {
         grid-column: 1/span 12;
     }
-    
+
     .origami {
         grid-column: 1/span 12;
     }
