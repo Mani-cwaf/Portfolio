@@ -19,14 +19,6 @@ document.querySelectorAll(".section").forEach((e => activeobserver.observe(e)));
 const scrollbar = document.querySelector(".scrollbar");
 
 const content = document.querySelector('.content');
-content.addEventListener('wheel', preventScroll, { passive: false });
-
-function preventScroll(e) {
-    e.preventDefault();
-    e.stopPropagation();
-
-    return false;
-}
 
 const scene = new THREE.Scene();
 
@@ -54,16 +46,30 @@ function addStar() {
 
 Array(200).fill().forEach(addStar);
 
-function animate() {
-    requestAnimationFrame(animate);
-
-    var factor = scrollbar.scrollTop / (scrollbar.scrollHeight - scrollbar.clientHeight);
-    scene.rotation.x = 5 * factor;
-    scene.rotation.y = 13 * factor;
-    scene.rotation.z = 2 * factor;
-
-    content.scroll(0, (content.scrollHeight - content.clientHeight) * factor, "smooth");
-
-    renderer.render(scene, camera);
-};
+function animate(){};
+if (window.innerWidth > 900) {
+    animate = () => {
+        requestAnimationFrame(animate);
+    
+        var factor = scrollbar.scrollTop / (scrollbar.scrollHeight - scrollbar.clientHeight);
+        scene.rotation.x = 5 * factor;
+        scene.rotation.y = 13 * factor;
+        scene.rotation.z = 2 * factor;
+    
+        content.scroll(0, (content.scrollHeight - content.clientHeight) * factor, "smooth");
+    
+        renderer.render(scene, camera);
+    };
+} else {
+    animate = () => {
+        requestAnimationFrame(animate);
+    
+        var factor = content.scrollTop / (content.scrollHeight - content.clientHeight);
+        scene.rotation.x = 5 * factor;
+        scene.rotation.y = 13 * factor;
+        scene.rotation.z = 2 * factor;
+        
+        renderer.render(scene, camera);
+    };
+}
 animate();

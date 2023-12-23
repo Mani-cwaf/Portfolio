@@ -454,7 +454,6 @@ body:has(.origami.section.active) .navindicator.origami {
 
 .display-content {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
 }
 
 .display-paragraph,
@@ -464,16 +463,41 @@ body:has(.origami.section.active) .navindicator.origami {
 }
 
 .display-paragraph {
-    grid-column: 1/span 1;
     padding: 0.5rem;
     height: 25rem;
 }
 
 .display-img {
-    grid-column: 2/span 1;
     height: 26rem;
 }
 
 .intro {
     margin-bottom: 3rem;
+}
+
+@media only screen and (min-width: 901px) {
+    .display-content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .display-paragraph {
+        grid-column: 1/span 1;
+        padding: 0.5rem;
+        height: 25rem;
+    }
+    
+    .display-img {
+        grid-column: 2/span 1;
+        height: 26rem;
+        width:100%;
+    }
+}
+@media only screen and (max-width: 900px) {
+    .display-img {
+        width: 100%;
+        object-fit:cover
+    }
+    .scrollbar {
+        display: none;
+    }
 }
