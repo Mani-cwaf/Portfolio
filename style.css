@@ -37,7 +37,6 @@
 
 /* Set global variables */
 :root {
-    --navbar-width: 64px;
     --color: grey;
     --contrast-color: rgb(0, 188, 240);
 }
@@ -50,11 +49,11 @@
 }
 
 .hidden-left {
-    transform: translate(-20vw, 15vh);
+    transform: translate(-20vw, 5vh);
 }
 
 .hidden-right {
-    transform: translate(20vw, 15vh);
+    transform: translate(20vw, 5vh);
 }
 
 .show {
@@ -113,7 +112,7 @@ body {
 }
 
 .section {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.25);
     border-radius: 10px;
     box-shadow: 2px 2px 5px 7px rgba(255, 255, 255, 0.5);
 }
@@ -125,10 +124,10 @@ body {
 
 .content {
     position: fixed;
-    top: 69px;
-    left: 69px;
-    width: calc(100vw - ((64px + 5px) * 2));
-    height: calc(100vh - ((64px + 5px) * 2));
+    top: calc(var(--navbar-width) + 5px);
+    left: calc(var(--navbar-width) + 5px);
+    width: calc(100vw - ((var(--navbar-width) + 5px) * 2));
+    height: calc(100vh - ((var(--navbar-width) + 5px) * 2));
     overflow-y: visible;
     overflow-x: hidden;
     display: grid;
@@ -142,26 +141,26 @@ body {
 
 .home {
     font-family: 'Rubik', sans-serif;
-    margin-top: 5rem;
-    margin-bottom: 35rem;
+    margin-top: calc(5 * var(--scale));
+    margin-bottom: calc(45 * var(--scale));
 }
 
 .about {
-    margin-bottom: 35rem;
+    margin-bottom: calc(45 * var(--scale));
 }
 
 .projects {
-    margin-bottom: 35rem;
+    margin-bottom: calc(45 * var(--scale));
 }
 
 .origami {
-    margin-bottom: 5rem;
+    margin-bottom: calc(5 * var(--scale));
 }
 
 canvas {
     position: fixed;
-    top: 69px;
-    left: 69px;
+    top: calc(var(--navbar-width) + 5px);
+    left: calc(var(--navbar-width) + 5px);
 }
 
 nav {
@@ -242,7 +241,7 @@ nav {
 .diagonals {
     position: absolute;
     border-top: 5px solid var(--contrast-color);
-    width: 95px;
+    width: calc((var(--navbar-width) + 5px) * 1.414);
     z-index: 99;
 }
 
@@ -274,18 +273,18 @@ nav {
 
 .logo-container {
     display: flex;
-    margin: 0.5rem 0 0 5rem;
+    margin: calc(0.5 * var(--scale)) 0 0 calc(5 * var(--scale));
 }
 
 .logo {
-    width: 42px;
-    height: 42px;
-    margin-right: 0.5rem;
+    width: calc(3 * var(--scale));
+    height: calc(3 * var(--scale));
+    margin-right: calc(0.5 * var(--scale));
     z-index: 99;
 }
 
 .logo-title {
-    font-size: xx-large;
+    font-size: calc(2 * var(--scale));
     margin: 0;
 }
 
@@ -293,7 +292,7 @@ nav {
 
 .indicators {
     display: flex;
-    padding: 0.75rem 5rem 0.75rem 5rem;
+    padding: calc(0.75 * var(--scale)) calc(5 * var(--scale)) calc(0.75 * var(--scale)) calc(5 * var(--scale));
     margin: auto;
     width: min-content;
     justify-content: center;
@@ -329,7 +328,7 @@ body:has(.origami.section.active) .navindicator.origami {
 }
 
 .timeline-component {
-    margin: 0 1rem 1rem 1rem;
+    margin: 0 calc(1 * var(--scale)) calc(1 * var(--scale)) calc(1 * var(--scale));
 }
 
 .timeline-component--bg {
@@ -371,7 +370,7 @@ body:has(.origami.section.active) .navindicator.origami {
 }
 
 .display-component {
-    margin: 0 1rem 1rem 1rem;
+    margin: 0 calc(1 * var(--scale)) calc(1 * var(--scale)) calc(1 * var(--scale));
 }
 
 .display-component--bg {
@@ -382,7 +381,7 @@ body:has(.origami.section.active) .navindicator.origami {
 }
 
 .display-date {
-    margin-top: 4rem;
+    margin-top: calc(4 * var(--scale));
     text-align: right;
 }
 
@@ -399,63 +398,41 @@ body:has(.origami.section.active) .navindicator.origami {
 .display-paragraph,
 .display-img {
     box-shadow: 1px 1px 5px 5px rgba(255, 255, 255, 0.5);
-    margin: 0.5rem;
+    margin: calc(0.5 * var(--scale));
 }
 
 .display-paragraph {
-    padding: 0.5rem;
-    height: 25rem;
-}
+    padding: calc(0.5 * var(--scale));
+    height: clamp(calc(30 * var(--scale)), calc(80vh * (100vh / 100vw)), 50 * var(--scale));
 
-.display-img {
-    height: 26rem;
 }
 
 .intro {
-    margin-bottom: 3rem;
+    margin-bottom: calc(3 * var(--scale));
+}
+
+
+.home {
+    grid-column: 2/span 6;
+}
+
+.about {
+    grid-column: 5/ span 7;
+}
+
+.projects {
+    grid-column: 2/span 9;
+}
+
+.origami {
+    grid-column: 3/span 9;
 }
 
 /* content for wide screens */
 @media only screen and (min-width: 901px) {
-    /* Design scrollbar */
-
-    .scrollbar {
-        --height: 70vh;
-        position: absolute;
-        overflow-y: scroll;
-        overflow-x: hidden;
-        left: calc(var(--navbar-width) - 56px);
-        top: calc(var(--navbar-width) + ((100vh - 10px - (var(--navbar-width) * 2) - var(--height)) / 2));
-        height: var(--height);
-        width: 50px;
-        z-index: 99;
-    }
-
-    .scrollbar div {
-        height: 200vh;
-        display: block;
-    }
-
-    .scrollbar::-webkit-scrollbar {
-        width: 50px;
-    }
-
-    .scrollbar::-webkit-scrollbar-track {
-        background: #a4a4a4;
-        border-radius: 10px;
-    }
-
-    .scrollbar::-webkit-scrollbar-thumb {
-        background: rgb(60, 60, 60);
-        border-radius: 10px;
-    }
-
-    .scrollbar::-webkit-scrollbar-thumb:hover {
-        background: rgb(65, 65, 65);
-    }
-
-    .scrollbar::-webkit-scrollbar-thumb:active {
-        background: rgb(70, 70, 70);
+    :root {
+        --navbar-width: 64px;
+        --scale: 15px
     }
 
     .display-content {
@@ -465,51 +442,40 @@ body:has(.origami.section.active) .navindicator.origami {
 
     .display-paragraph {
         grid-column: 1/span 1;
-        padding: 0.5rem;
-        height: 25rem;
+        padding: calc(0.5 * var(--scale));
     }
 
     .display-img {
         grid-column: 2/span 1;
-        height: 26rem;
-        width: calc(100% - 1rem);
+        height: calc(26 * var(--scale));
+        width: calc(100% - calc(1 * var(--scale)));
     }
 
     .navindicator {
         margin: 0 5vw 0 5vw;
-        padding: 0.5rem;
-        font-size: 1.5rem;
-        width: 6rem;
+        padding: calc(0.5 * var(--scale));
+        font-size: calc(1.5 * var(--scale));
+        width: calc(7 * var(--scale));
     }
 
-    .home {
-        grid-column: 2/span 6;
-    }
-
-    .about {
-        grid-column: 5/ span 7;
-    }
-
-    .projects {
-        grid-column: 2/span 9;
-    }
-
-    .origami {
-        grid-column: 3/span 9;
-    }
 
     .section {
-        padding: 1rem;
-        margin-left: 2rem;
-        margin-right: 2rem;
+        padding: calc(1 * var(--scale));
+        margin-left: calc(2 * var(--scale));
+        margin-right: calc(2 * var(--scale));
     }
 }
 
 /* content for thin screens */
 @media only screen and (max-width: 900px) {
+    :root {
+        --navbar-width: 42px;
+        --scale: 12px
+    }
+
     .display-img {
         object-fit: cover;
-        width: calc(100% - 1rem);
+        width: calc(100% - calc(1 * var(--scale)));
     }
 
     .scrollbar {
@@ -518,47 +484,26 @@ body:has(.origami.section.active) .navindicator.origami {
 
     .navindicator {
         margin: 0 3vw 0 3vw;
-        padding: 0.25rem;
-        font-size: clamp(0.5rem, 1.25rem, 1rem);
-    }
-
-    .content {
-        position: fixed;
-        top: 69px;
-        left: 69px;
-        width: calc(100vw - ((64px + 5px) * 2));
-        height: calc(100vh - ((64px + 5px) * 2));
-        overflow-y: visible;
-        overflow-x: hidden;
-        display: grid;
-        grid-template-columns: repeat(12, 1fr);
-        background: rgba(255, 255, 255, 0.1);
+        padding: calc(0.25 * var(--scale));
+        font-size: clamp(calc(0.5 * var(--scale)), calc(1.25 * var(--scale)), calc(1 * var(--scale)));
     }
 
     .content::-webkit-scrollbar {
         width: 0;
     }
 
-    .home {
-        grid-column: 2/span 9;
-    }
-
-    .about {
-        grid-column: 3/ span 10;
+    .home-title {
+        font-size: clamp(calc(0.5 * var(--scale)), 5vw, calc(3 * var(--scale)));
     }
 
     .projects {
-        grid-column: 1/span 12;
-    }
-
-    .origami {
-        grid-column: 1/span 12;
+        grid-column: 2/span 10;
     }
 
     .section {
-        padding: 0.5rem;
-        margin-left: 1rem;
-        margin-right: 1rem;
-        font-size: clamp(0.5rem, 0.75rem, 0.75rem);
+        padding: calc(0.5 * var(--scale));
+        margin-left: calc(1 * var(--scale));
+        margin-right: calc(1 * var(--scale));
+        font-size: clamp(calc(0.75 * var(--scale)), 3vw, calc(1.5 * var(--scale)));
     }
 }

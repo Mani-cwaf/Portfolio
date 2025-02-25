@@ -7,8 +7,8 @@
     <meta name="description" content="My Portfolio Website.">
     <meta name="theme-color" content="#00bcf0" />
     <title>My Portfolio</title>
-  <script type="module" crossorigin src="/assets/index-C37Ftu4K.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/index-smsnZDPN.css">
+  <script type="module" crossorigin src="/assets/index-C_kO4wm6.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-BUL7jxjd.css">
 </head>
 
 <body>
@@ -40,17 +40,18 @@
             </div>
         </nav>
         <nav class="leftbar"></nav>
-        <nav class="rightbar">
-            <div class="scrollbar">
-                <div>.</div>
-            </div>
-        </nav>
+        <nav class="rightbar"></nav>
         <nav class="bottombar">
             <div class="indicators">
-                <div class="navindicator home no-touch">Home</div>
-                <div class="navindicator about no-touch">About</div>
-                <div class="navindicator code no-touch">Code</div>
-                <div class="navindicator origami no-touch">Origami</div>
+
+                <button class="navindicator home"
+                    onclick="smoothScroll(document.querySelector('.home.section'))">Home</button>
+                <button class="navindicator about"
+                    onclick="smoothScroll(document.querySelector('.about.section'))">About</button>
+                <button class="navindicator code"
+                    onclick="smoothScroll(document.querySelector('.projects.section'))">Code</button>
+                <button class="navindicator origami"
+                    onclick="smoothScroll(document.querySelector('.origami.section'))">Origami</button>
             </div>
         </nav>
         <div class="screen">
@@ -68,13 +69,14 @@
                     <h2 class='section-title hidden hidden-right' style='--animation-delay: 250ms'>About</h2>
                     <div class='about-container hidden hidden-right' style='--animation-delay: 250ms'>
                         <div>
-                            <h2 class='subtitle'>I'm Manishankar Dhingra!</h2>
-                            <p class='about-text'>I've been a programmer since I made Java mods for my then
-                                favourite video game, Minecraft, when I was 10. I started with modding video games,
-                                then tried to make my own unity games. I occasionally make python scripts and bots
-                                and then moved to web development, where I made my first portfolio site, and now
-                                this one. I've also been a lifelong fan of origami, the only type of art I'm good at
-                                lol. </p>
+                            <p class='about-text'>I've been interested in programming since I was 10, when I realised I
+                                could make mods for my
+                                favourite video game, Minecraft. I started with modding video games in Java and C#, and
+                                then
+                                tried making my own unity games. For a while I occasionally made python scripts and bots
+                                and then moved to web development, which is when I made this portfolio site. Alongside
+                                gaming, I also do Origami in my free time.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -94,9 +96,9 @@
                                 style='--animation-delay: 400ms'>
                                 <h2 class='timeline-title'>First Coding Project: Ruby Items</h2>
                                 <p class='timeline-paragraph'>
-                                    <br> My first ever coding project was a minecraft mod, I made it several years
-                                    ago but
-                                    decided to upload it to github in 2021.
+                                    <br> My first ever coding project was a minecraft mod, I first made it around 2020
+                                    but
+                                    came back to it and uploaded it to github in 2021.
                                     <br> <a target='_blank' class='link'
                                         href='https://github.com/Mani-cwaf/Ruby-Items-1.16.1-1.0.0'><button><span
                                                 class='link'><b>Github</b></span></button></a>
@@ -182,7 +184,7 @@
                                 style='--animation-delay: 400ms'>
                                 <h2 class='timeline-title'>Second Unity Game: Horror Maze</h2>
                                 <p class='timeline-paragraph'>
-                                    <br> The best horror game ever, trust me.
+                                    <br> The worst "horror" game ever made.
                                     <br><br> Web: <a target='_blank' class='link'
                                         href='https://mani-dev101.itch.io/horror-maze'><button><span
                                                 class='link'><b>Play</b></span></button></a>
@@ -201,31 +203,13 @@
                                 <div class='timeline-date--left'>September 16, 2022</div>
                             </div>
 
-
                             <div class='timeline-component'>
-                                <div class='timeline-date timeline-date--right'>October 31, 2022</div>
+                                <div class='timeline-date timeline-date--right'>November 4, 2022</div>
                             </div>
                             <div class='timeline-middle'>
                                 <div class='timeline-point'></div>
                             </div>
                             <div class='timeline-component timeline-component--bg hidden hidden-right'
-                                style='--animation-delay: 400ms'>
-                                <h2 class='timeline-title'>Poll Bot</h2>
-                                <p class='timeline-paragraph'>
-                                    A simple discord bot that allows you to create polls, and logs results after a
-                                    given
-                                    time period [WIP]
-                                    <br><br> Source code: <a target='_blank' class='link'
-                                        href='https://github.com/Mani-cwaf/DiscordPollBot'><button><span
-                                                class='link'><b>Github</b></span></button></a>
-                                    <br><br> Invite bot to your server: <a target='_blank' class='link'
-                                        href='https://discord.com/api/oauth2/authorize?client_id=992445952533209198&permissions=8&scope=bot'><button><span
-                                                class='link'><b>Link</b></span></button></a>
-                                </p>
-                            </div>
-
-
-                            <div class='timeline-component timeline-component--bg hidden hidden-left'
                                 style='--animation-delay: 400ms'>
                                 <h2 class='timeline-title'>Made This Website</h2>
                                 <p class='timeline-paragraph'>
@@ -234,30 +218,22 @@
                                                 class='link'><b>Github</b></span></button></a>
                                 </p>
                             </div>
-                            <div class='timeline-middle'>
-                                <div class='timeline-point'></div>
-                            </div>
-                            <div class='timeline-component'>
-                                <div class='timeline-date timeline-date--left'>November 4, 2022</div>
-                            </div>
 
-                            <div class='timeline-component'>
-                                <div class='timeline-date timeline-date--right'>May 12, 2024</div>
-                            </div>
-                            <div class='timeline-middle'>
-                                <div class='timeline-point'></div>
-                            </div>
-                            <div class='timeline-component timeline-component--bg hidden hidden-right'
+                            <div class='timeline-component timeline-component--bg hidden hidden-left'
                                 style='--animation-delay: 400ms'>
                                 <h2 class='timeline-title'>Binary Calculator</h2>
                                 <p class='timeline-paragraph'>
                                     A calculator designed and made in minecraft, that accepts 2, 5 digit numbers and
-                                    displays the result of an operation on a 7 segment display screen, using the double
-                                    dabble and two's complement algorithm
-                                    <br><br> World File: <a class='link'
-                                    href='/Redstone.zip'><button><span
-                                            class='link'><b>Download</b></span></button></a>
+                                    displays the result of an operation on a 7 segment display screen.
+                                    <br><br> World File: <a class='link' href='/Redstone.zip'><button><span
+                                                class='link'><b>Download</b></span></button></a>
                                 </p>
+                            </div>
+                            <div class='timeline-middle'>
+                                <div class='timeline-point'></div>
+                            </div>
+                            <div class='timeline-component'>
+                                <div class='timeline-date timeline-date--left'>May 12, 2024</div>
                             </div>
 
                         </div>
@@ -320,7 +296,7 @@
                                 <div class="display-content">
                                     <p class='display-paragraph'>
                                         Designed by Miyamoto Chuya, This was a finicky and complex model. It was
-                                        more interesting than the phoenix and somewhat easier, but time consuming
+                                        the least repetitive model, but time consuming due to some of the confusing folds
                                         and difficult nonetheless.
                                         <br><br>Time Taken Folding: 10 Hours
                                         <br><br>Paper Used: 48x48cm one side black double tissue paper treated with
@@ -338,8 +314,7 @@
                                 <h2 class='display-title'>Caduceus</h2>
                                 <div class="display-content">
                                     <p class='display-paragraph'>
-                                        Designed by Tim Rickman, This was a tedius and difficult model. It was
-                                        certainly interesting, but the 56x56 grid and box pleating method took the
+                                        Designed by Tim Rickman, This was a tedius and difficult model. The 56x56 grid and box pleating method took the
                                         longest, and the cmc shaping was difficult, but led to my personal favourite
                                         model so far.
                                         <br><br>Time Taken Folding: 18 Hours

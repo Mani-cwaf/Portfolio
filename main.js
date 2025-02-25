@@ -16,10 +16,8 @@ const activeobserver = new IntersectionObserver((e => {
         e.isIntersecting ? e.target.classList.add("active") : e.target.classList.remove("active")
     }))
 }));
-document.querySelectorAll(".section").forEach((e => activeobserver.observe(e)));
-
-
-const scrollbar = document.querySelector(".scrollbar");
+const sections = document.querySelectorAll(".section")
+sections.forEach((e => activeobserver.observe(e)));
 
 const content = document.querySelector('.content');
 
@@ -32,51 +30,61 @@ const renderer = new THREE.WebGLRenderer({
 });
 
 renderer.setPixelRatio(window.devicePixelRatio);
-renderer.setSize(window.innerWidth - ((64 + 5) * 2), window.innerHeight - ((64 + 5) * 2));
+const margin = window.innerWidth > 900 ? 64 : 42
+renderer.setSize(window.innerWidth - ((margin + 5) * 2), window.innerHeight - ((margin + 5) * 2));
 
 camera.position.setZ(30);
 
 const stargeometry = new THREE.SphereGeometry(0.25, 24, 24);
-const starmaterial = new THREE.MeshBasicMaterial({ color: 0xffffff });
+const starmaterial = new THREE.MeshBasicMaterial({ color: 0x00bcf0 });
 function addStars() {
     for (let i = 0; i < 200; i++) {
         const star = new THREE.Mesh(stargeometry, starmaterial);
     
         star.position.set(...Array(3).fill().map(() => THREE.MathUtils.randFloatSpread(85)));
+        star.material.shading = THREE.SmoothShading;
+        star.material.transparent = true;
+        star.material.opacity = 0.5;
+        star.geometry.computeVertexNormals(true);
         scene.add(star);
     }
 };
 
-window.onload = () => {
-    setTimeout(() => {
-        addStars();
-    }, 500);
+addStars();
+
+renderer.render(scene, camera); 
+
+window.smoothScroll = function(target) {    
+    var scrollContainer = target;
+    do { //find scroll container
+        scrollContainer = scrollContainer.parentNode;
+        if (!scrollContainer) return;
+        scrollContainer.scrollTop += 1;
+    } while (scrollContainer.scrollTop == 0);
+
+    var targetY = 0;
+    do { //find the top of target relatively to the container
+        if (target == scrollContainer) break;
+        targetY += target.offsetTop - 75;
+    } while (target = target.offsetParent);
+
+    scroll = function(c, a, b, i) {
+        i++; if (i > 200) return;
+        c.scrollTop = a + (b - a) / 200 * i;
+    console.log((a + (b - a)))
+
+        setTimeout(function(){ scroll(c, a, b, i); }, 0.002 * (a + (b - a)));
+    }
+    // start scrolling
+    scroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
 }
 
-function animate() { };
-if (window.innerWidth > 900) {
-    animate = () => {
-        requestAnimationFrame(animate);
-
-        var factor = scrollbar.scrollTop / (scrollbar.scrollHeight - scrollbar.clientHeight);
-        scene.rotation.x = 5 * factor;
-        scene.rotation.y = 13 * factor;
-        scene.rotation.z = 2 * factor;
-
-        content.scroll(0, (content.scrollHeight - content.clientHeight) * factor, "smooth");
-
-        renderer.render(scene, camera);
-    };
-} else {
-    animate = () => {
-        requestAnimationFrame(animate);
-
-        var factor = content.scrollTop / (content.scrollHeight - content.clientHeight);
-        scene.rotation.x = 5 * factor;
-        scene.rotation.y = 13 * factor;
-        scene.rotation.z = 2 * factor;
-
-        renderer.render(scene, camera);
-    };
+const scrollstars = () => {
+    var factor = content.scrollTop / (content.scrollHeight - content.clientHeight);
+    scene.rotation.x = 5 * factor;
+    scene.rotation.y = 13 * factor;
+    scene.rotation.z = 2 * factor;
+    renderer.render(scene, camera); 
 }
-animate();
+
+content.addEventListener("scroll", () => {scrollstars()})
